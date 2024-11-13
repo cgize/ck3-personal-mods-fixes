@@ -1,0 +1,3316 @@
+﻿##############################
+##(POSITIVE SCORES CONSIDER)##
+##############################
+
+##KET## BASIC SKILL SCORES
+skill_diplomacy_score_value_20pt = {
+	value = diplomacy
+	multiply = 1
+	max = 20
+	desc = court_position_skill_diplomacy
+}
+skill_diplomacy_score_value_30pt = {
+	value = diplomacy
+	multiply = 1.5
+	max = 30
+	desc = court_position_skill_diplomacy
+}
+skill_diplomacy_score_value_40pt = {
+	value = diplomacy
+	multiply = 2
+	max = 40
+	desc = court_position_skill_diplomacy
+}
+skill_diplomacy_score_value_50pt = {
+	value = diplomacy
+	multiply = 2.5
+	max = 50
+	desc = court_position_skill_diplomacy
+}
+
+skill_martial_score_value_20pt = {
+	value = martial
+	multiply = 1
+	max = 20
+	desc = court_position_skill_martial
+}
+skill_martial_score_value_30pt = {
+	value = martial
+	multiply = 1.5
+	max = 30
+	desc = court_position_skill_martial
+}
+skill_martial_score_value_40pt = {
+	value = martial
+	multiply = 2
+	max = 40
+	desc = court_position_skill_martial
+}
+skill_martial_score_value_50pt = {
+	value = martial
+	multiply = 2.5
+	max = 50
+	desc = court_position_skill_martial
+}
+
+skill_stewardship_score_value_20pt = {
+	value = stewardship
+	multiply = 1
+	max = 20
+	desc = court_position_skill_stewardship
+}
+skill_stewardship_score_value_30pt = {
+	value = stewardship
+	multiply = 1.5
+	max = 30
+	desc = court_position_skill_stewardship
+}
+skill_stewardship_score_value_40pt = {
+	value = stewardship
+	multiply = 2
+	max = 40
+	desc = court_position_skill_stewardship
+}
+skill_stewardship_score_value_50pt = {
+	value = stewardship
+	multiply = 2.5
+	max = 50
+	desc = court_position_skill_stewardship
+}
+
+skill_learning_score_value_20pt = {
+	value = learning
+	multiply = 1
+	max = 20
+	desc = court_position_skill_learning
+}
+skill_learning_score_value_30pt = {
+	value = learning
+	multiply = 1.5
+	max = 30
+	desc = court_position_skill_learning
+}
+skill_learning_score_value_40pt = {
+	value = learning
+	multiply = 2
+	max = 40
+	desc = court_position_skill_learning
+}
+skill_learning_score_value_50pt = {
+	value = learning
+	multiply = 2.5
+	max = 50
+	desc = court_position_skill_learning
+}
+
+skill_intrigue_score_value_20pt = {
+	value = intrigue
+	multiply = 1
+	max = 20
+	desc = court_position_skill_intrigue
+}
+skill_intrigue_score_value_30pt = {
+	value = intrigue
+	multiply = 1.5
+	max = 30
+	desc = court_position_skill_intrigue
+}
+skill_intrigue_score_value_40pt = {
+	value = intrigue
+	multiply = 2
+	max = 40
+	desc = court_position_skill_intrigue
+}
+skill_intrigue_score_value_50pt = {
+	value = intrigue
+	multiply = 2.5
+	max = 50
+	desc = court_position_skill_intrigue
+}
+
+skill_prowess_score_value_10pt = {
+	value = prowess
+	multiply = 0.5
+	max = 10
+	desc = court_position_skill_prowess
+}
+skill_prowess_score_value_20pt = {
+	value = prowess
+	multiply = 1
+	max = 20
+	desc = court_position_skill_prowess
+}
+skill_prowess_score_value_30pt = {
+	value = prowess
+	multiply = 1.5
+	max = 30
+	desc = court_position_skill_prowess
+}
+skill_prowess_score_value_40pt = {
+	value = prowess
+	multiply = 2
+	max = 40
+	desc = court_position_skill_prowess
+}
+skill_prowess_score_value_50pt = {
+	value = prowess
+	multiply = 2.5
+	max = 50
+	desc = court_position_skill_prowess
+}
+
+##KET## EDUCATION SCORES
+education_diplomacy_value_10pt = {
+	if = {
+		limit = {
+			has_trait = education_diplomacy_5
+		}
+		add = {
+			value = 12
+			desc = court_position_education_diplomacy_trait
+		}
+	}
+	else_if = {
+		limit = {
+			has_trait = education_diplomacy_4
+		}
+		add = {
+			value = 10
+			desc = court_position_education_diplomacy_trait
+		}
+	}
+	else_if = {
+		limit = {
+			has_trait = education_diplomacy_3
+		}
+		add = {
+			value = 8
+			desc = court_position_education_diplomacy_trait
+		}
+	}
+	else_if = {
+		limit = {
+			has_trait = education_diplomacy_2
+		}
+		add = {
+			value = 5
+			desc = court_position_education_diplomacy_trait
+		}
+	}
+	else_if = {
+		limit = {
+			has_trait = education_diplomacy_1
+		}
+		add = {
+			value = 3
+			desc = court_position_education_diplomacy_trait
+		}
+	}	
+}
+education_diplomacy_value_20pt = {
+	if = {
+		limit = {
+			has_trait = education_diplomacy_5
+		}
+		add = {
+			value = 25
+			desc = court_position_education_diplomacy_trait
+		}
+	}
+	else_if = {
+		limit = {
+			has_trait = education_diplomacy_4
+		}
+		add = {
+			value = 20
+			desc = court_position_education_diplomacy_trait
+		}
+	}
+	else_if = {
+		limit = {
+			has_trait = education_diplomacy_3
+		}
+		add = {
+			value = 15
+			desc = court_position_education_diplomacy_trait
+		}
+	}
+	else_if = {
+		limit = {
+			has_trait = education_diplomacy_2
+		}
+		add = {
+			value = 10
+			desc = court_position_education_diplomacy_trait
+		}
+	}
+	else_if = {
+		limit = {
+			has_trait = education_diplomacy_1
+		}
+		add = {
+			value = 5
+			desc = court_position_education_diplomacy_trait
+		}
+	}	
+}
+education_diplomacy_value_30pt = {
+	if = {
+		limit = {
+			has_trait = education_diplomacy_5
+		}
+		add = {
+			value = 35
+			desc = court_position_education_diplomacy_trait
+		}
+	}
+	else_if = {
+		limit = {
+			has_trait = education_diplomacy_4
+		}
+		add = {
+			value = 30
+			desc = court_position_education_diplomacy_trait
+		}
+	}
+	else_if = {
+		limit = {
+			has_trait = education_diplomacy_3
+		}
+		add = {
+			value = 22
+			desc = court_position_education_diplomacy_trait
+		}
+	}
+	else_if = {
+		limit = {
+			has_trait = education_diplomacy_2
+		}
+		add = {
+			value = 15
+			desc = court_position_education_diplomacy_trait
+		}
+	}
+	else_if = {
+		limit = {
+			has_trait = education_diplomacy_1
+		}
+		add = {
+			value = 7
+			desc = court_position_education_diplomacy_trait
+		}
+	}	
+}
+education_diplomacy_value_40pt = {
+	if = {
+		limit = {
+			has_trait = education_diplomacy_5
+		}
+		add = {
+			value = 50
+			desc = court_position_education_diplomacy_trait
+		}
+	}
+	else_if = {
+		limit = {
+			has_trait = education_diplomacy_4
+		}
+		add = {
+			value = 40
+			desc = court_position_education_diplomacy_trait
+		}
+	}
+	else_if = {
+		limit = {
+			has_trait = education_diplomacy_3
+		}
+		add = {
+			value = 30
+			desc = court_position_education_diplomacy_trait
+		}
+	}
+	else_if = {
+		limit = {
+			has_trait = education_diplomacy_2
+		}
+		add = {
+			value = 20
+			desc = court_position_education_diplomacy_trait
+		}
+	}
+	else_if = {
+		limit = {
+			has_trait = education_diplomacy_1
+		}
+		add = {
+			value = 10
+			desc = court_position_education_diplomacy_trait
+		}
+	}	
+}
+
+education_martial_value_10pt = {
+	if = {
+		limit = {
+			has_trait = education_martial_5
+		}
+		add = {
+			value = 12
+			desc = court_position_education_martial_trait
+		}
+	}
+	if = {
+		limit = {
+			has_trait = education_martial_4
+		}
+		add = {
+			value = 10
+			desc = court_position_education_martial_trait
+		}
+	}
+	else_if = {
+		limit = {
+			has_trait = education_martial_3
+		}
+		add = {
+			value = 8
+			desc = court_position_education_martial_trait
+		}
+	}
+	else_if = {
+		limit = {
+			has_trait = education_martial_2
+		}
+		add = {
+			value = 5
+			desc = court_position_education_martial_trait
+		}
+	}
+	else_if = {
+		limit = {
+			has_trait = education_martial_1
+		}
+		add = {
+			value = 3
+			desc = court_position_education_martial_trait
+		}
+	}	
+}
+education_martial_value_20pt = {
+	if = {
+		limit = {
+			has_trait = education_martial_5
+		}
+		add = {
+			value = 25
+			desc = court_position_education_martial_trait
+		}
+	}
+	else_if = {
+		limit = {
+			has_trait = education_martial_4
+		}
+		add = {
+			value = 20
+			desc = court_position_education_martial_trait
+		}
+	}
+	else_if = {
+		limit = {
+			has_trait = education_martial_3
+		}
+		add = {
+			value = 15
+			desc = court_position_education_martial_trait
+		}
+	}
+	else_if = {
+		limit = {
+			has_trait = education_martial_2
+		}
+		add = {
+			value = 10
+			desc = court_position_education_martial_trait
+		}
+	}
+	else_if = {
+		limit = {
+			has_trait = education_martial_1
+		}
+		add = {
+			value = 5
+			desc = court_position_education_martial_trait
+		}
+	}	
+}
+education_martial_value_30pt = {
+	if = {
+		limit = {
+			has_trait = education_martial_5
+		}
+		add = {
+			value = 35
+			desc = court_position_education_martial_trait
+		}
+	}
+	else_if = {
+		limit = {
+			has_trait = education_martial_4
+		}
+		add = {
+			value = 30
+			desc = court_position_education_martial_trait
+		}
+	}
+	else_if = {
+		limit = {
+			has_trait = education_martial_3
+		}
+		add = {
+			value = 22
+			desc = court_position_education_martial_trait
+		}
+	}
+	else_if = {
+		limit = {
+			has_trait = education_martial_2
+		}
+		add = {
+			value = 15
+			desc = court_position_education_martial_trait
+		}
+	}
+	else_if = {
+		limit = {
+			has_trait = education_martial_1
+		}
+		add = {
+			value = 7
+			desc = court_position_education_martial_trait
+		}
+	}	
+}
+education_martial_value_40pt = {
+	if = {
+		limit = {
+			has_trait = education_martial_5
+		}
+		add = {
+			value = 50
+			desc = court_position_education_martial_trait
+		}
+	}
+	else_if = {
+		limit = {
+			has_trait = education_martial_4
+		}
+		add = {
+			value = 40
+			desc = court_position_education_martial_trait
+		}
+	}
+	else_if = {
+		limit = {
+			has_trait = education_martial_3
+		}
+		add = {
+			value = 30
+			desc = court_position_education_martial_trait
+		}
+	}
+	else_if = {
+		limit = {
+			has_trait = education_martial_2
+		}
+		add = {
+			value = 20
+			desc = court_position_education_martial_trait
+		}
+	}
+	else_if = {
+		limit = {
+			has_trait = education_martial_1
+		}
+		add = {
+			value = 10
+			desc = court_position_education_martial_trait
+		}
+	}	
+}
+
+education_stewardship_value_10pt = {
+	if = {
+		limit = {
+			has_trait = education_stewardship_5
+		}
+		add = {
+			value = 12
+			desc = court_position_education_stewardship_trait
+		}
+	}
+	else_if = {
+		limit = {
+			has_trait = education_stewardship_4
+		}
+		add = {
+			value = 10
+			desc = court_position_education_stewardship_trait
+		}
+	}
+	else_if = {
+		limit = {
+			has_trait = education_stewardship_3
+		}
+		add = {
+			value = 8
+			desc = court_position_education_stewardship_trait
+		}
+	}
+	else_if = {
+		limit = {
+			has_trait = education_stewardship_2
+		}
+		add = {
+			value = 5
+			desc = court_position_education_stewardship_trait
+		}
+	}
+	else_if = {
+		limit = {
+			has_trait = education_stewardship_1
+		}
+		add = {
+			value = 3
+			desc = court_position_education_stewardship_trait
+		}
+	}	
+}
+education_stewardship_value_20pt = {
+	if = {
+		limit = {
+			has_trait = education_stewardship_5
+		}
+		add = {
+			value = 25
+			desc = court_position_education_stewardship_trait
+		}
+	}
+	else_if = {
+		limit = {
+			has_trait = education_stewardship_4
+		}
+		add = {
+			value = 20
+			desc = court_position_education_stewardship_trait
+		}
+	}
+	else_if = {
+		limit = {
+			has_trait = education_stewardship_3
+		}
+		add = {
+			value = 15
+			desc = court_position_education_stewardship_trait
+		}
+	}
+	else_if = {
+		limit = {
+			has_trait = education_stewardship_2
+		}
+		add = {
+			value = 10
+			desc = court_position_education_stewardship_trait
+		}
+	}
+	else_if = {
+		limit = {
+			has_trait = education_stewardship_1
+		}
+		add = {
+			value = 5
+			desc = court_position_education_stewardship_trait
+		}
+	}	
+}
+education_stewardship_value_30pt = {
+	if = {
+		limit = {
+			has_trait = education_stewardship_5
+		}
+		add = {
+			value = 35
+			desc = court_position_education_stewardship_trait
+		}
+	}
+	else_if = {
+		limit = {
+			has_trait = education_stewardship_4
+		}
+		add = {
+			value = 30
+			desc = court_position_education_stewardship_trait
+		}
+	}
+	else_if = {
+		limit = {
+			has_trait = education_stewardship_3
+		}
+		add = {
+			value = 22
+			desc = court_position_education_stewardship_trait
+		}
+	}
+	else_if = {
+		limit = {
+			has_trait = education_stewardship_2
+		}
+		add = {
+			value = 15
+			desc = court_position_education_stewardship_trait
+		}
+	}
+	else_if = {
+		limit = {
+			has_trait = education_stewardship_1
+		}
+		add = {
+			value = 7
+			desc = court_position_education_stewardship_trait
+		}
+	}	
+}
+education_stewardship_value_40pt = {
+	if = {
+		limit = {
+			has_trait = education_stewardship_5
+		}
+		add = {
+			value = 50
+			desc = court_position_education_stewardship_trait
+		}
+	}
+	else_if = {
+		limit = {
+			has_trait = education_stewardship_4
+		}
+		add = {
+			value = 40
+			desc = court_position_education_stewardship_trait
+		}
+	}
+	else_if = {
+		limit = {
+			has_trait = education_stewardship_3
+		}
+		add = {
+			value = 30
+			desc = court_position_education_stewardship_trait
+		}
+	}
+	else_if = {
+		limit = {
+			has_trait = education_stewardship_2
+		}
+		add = {
+			value = 20
+			desc = court_position_education_stewardship_trait
+		}
+	}
+	else_if = {
+		limit = {
+			has_trait = education_stewardship_1
+		}
+		add = {
+			value = 10
+			desc = court_position_education_stewardship_trait
+		}
+	}	
+}
+
+education_learning_value_10pt = {
+	if = {
+		limit = {
+			has_trait = education_learning_5
+		}
+		add = {
+			value = 12
+			desc = court_position_education_learning_trait
+		}
+	}
+	else_if = {
+		limit = {
+			has_trait = education_learning_4
+		}
+		add = {
+			value = 10
+			desc = court_position_education_learning_trait
+		}
+	}
+	else_if = {
+		limit = {
+			has_trait = education_learning_3
+		}
+		add = {
+			value = 8
+			desc = court_position_education_learning_trait
+		}
+	}
+	else_if = {
+		limit = {
+			has_trait = education_learning_2
+		}
+		add = {
+			value = 5
+			desc = court_position_education_learning_trait
+		}
+	}
+	else_if = {
+		limit = {
+			has_trait = education_learning_1
+		}
+		add = {
+			value = 3
+			desc = court_position_education_learning_trait
+		}
+	}	
+}
+education_learning_value_20pt = {
+	if = {
+		limit = {
+			has_trait = education_learning_5
+		}
+		add = {
+			value = 25
+			desc = court_position_education_learning_trait
+		}
+	}
+	else_if = {
+		limit = {
+			has_trait = education_learning_4
+		}
+		add = {
+			value = 20
+			desc = court_position_education_learning_trait
+		}
+	}
+	else_if = {
+		limit = {
+			has_trait = education_learning_3
+		}
+		add = {
+			value = 15
+			desc = court_position_education_learning_trait
+		}
+	}
+	else_if = {
+		limit = {
+			has_trait = education_learning_2
+		}
+		add = {
+			value = 10
+			desc = court_position_education_learning_trait
+		}
+	}
+	else_if = {
+		limit = {
+			has_trait = education_learning_1
+		}
+		add = {
+			value = 5
+			desc = court_position_education_learning_trait
+		}
+	}	
+}
+education_learning_value_30pt = {
+	if = {
+		limit = {
+			has_trait = education_learning_5
+		}
+		add = {
+			value = 35
+			desc = court_position_education_learning_trait
+		}
+	}
+	else_if = {
+		limit = {
+			has_trait = education_learning_4
+		}
+		add = {
+			value = 30
+			desc = court_position_education_learning_trait
+		}
+	}
+	else_if = {
+		limit = {
+			has_trait = education_learning_3
+		}
+		add = {
+			value = 22
+			desc = court_position_education_learning_trait
+		}
+	}
+	else_if = {
+		limit = {
+			has_trait = education_learning_2
+		}
+		add = {
+			value = 15
+			desc = court_position_education_learning_trait
+		}
+	}
+	else_if = {
+		limit = {
+			has_trait = education_learning_1
+		}
+		add = {
+			value = 7
+			desc = court_position_education_learning_trait
+		}
+	}	
+}
+education_learning_value_40pt = {
+	if = {
+		limit = {
+			has_trait = education_learning_5
+		}
+		add = {
+			value = 50
+			desc = court_position_education_learning_trait
+		}
+	}
+	else_if = {
+		limit = {
+			has_trait = education_learning_4
+		}
+		add = {
+			value = 40
+			desc = court_position_education_learning_trait
+		}
+	}
+	else_if = {
+		limit = {
+			has_trait = education_learning_3
+		}
+		add = {
+			value = 30
+			desc = court_position_education_learning_trait
+		}
+	}
+	else_if = {
+		limit = {
+			has_trait = education_learning_2
+		}
+		add = {
+			value = 20
+			desc = court_position_education_learning_trait
+		}
+	}
+	else_if = {
+		limit = {
+			has_trait = education_learning_1
+		}
+		add = {
+			value = 10
+			desc = court_position_education_learning_trait
+		}
+	}	
+}
+
+education_intrigue_value_10pt = {
+	if = {
+		limit = {
+			has_trait = education_intrigue_5
+		}
+		add = {
+			value = 12
+			desc = court_position_education_intrigue_trait
+		}
+	}
+	else_if = {
+		limit = {
+			has_trait = education_intrigue_4
+		}
+		add = {
+			value = 10
+			desc = court_position_education_intrigue_trait
+		}
+	}
+	else_if = {
+		limit = {
+			has_trait = education_intrigue_3
+		}
+		add = {
+			value = 8
+			desc = court_position_education_intrigue_trait
+		}
+	}
+	else_if = {
+		limit = {
+			has_trait = education_intrigue_2
+		}
+		add = {
+			value = 5
+			desc = court_position_education_intrigue_trait
+		}
+	}
+	else_if = {
+		limit = {
+			has_trait = education_intrigue_1
+		}
+		add = {
+			value = 3
+			desc = court_position_education_intrigue_trait
+		}
+	}	
+}
+education_intrigue_value_20pt = {
+	if = {
+		limit = {
+			has_trait = education_intrigue_5
+		}
+		add = {
+			value = 25
+			desc = court_position_education_intrigue_trait
+		}
+	}
+	else_if = {
+		limit = {
+			has_trait = education_intrigue_4
+		}
+		add = {
+			value = 20
+			desc = court_position_education_intrigue_trait
+		}
+	}
+	else_if = {
+		limit = {
+			has_trait = education_intrigue_3
+		}
+		add = {
+			value = 15
+			desc = court_position_education_intrigue_trait
+		}
+	}
+	else_if = {
+		limit = {
+			has_trait = education_intrigue_2
+		}
+		add = {
+			value = 10
+			desc = court_position_education_intrigue_trait
+		}
+	}
+	else_if = {
+		limit = {
+			has_trait = education_intrigue_1
+		}
+		add = {
+			value = 5
+			desc = court_position_education_intrigue_trait
+		}
+	}	
+}
+education_intrigue_value_30pt = {
+	if = {
+		limit = {
+			has_trait = education_intrigue_5
+		}
+		add = {
+			value = 35
+			desc = court_position_education_intrigue_trait
+		}
+	}
+	else_if = {
+		limit = {
+			has_trait = education_intrigue_4
+		}
+		add = {
+			value = 30
+			desc = court_position_education_intrigue_trait
+		}
+	}
+	else_if = {
+		limit = {
+			has_trait = education_intrigue_3
+		}
+		add = {
+			value = 22
+			desc = court_position_education_intrigue_trait
+		}
+	}
+	else_if = {
+		limit = {
+			has_trait = education_intrigue_2
+		}
+		add = {
+			value = 15
+			desc = court_position_education_intrigue_trait
+		}
+	}
+	else_if = {
+		limit = {
+			has_trait = education_intrigue_1
+		}
+		add = {
+			value = 7
+			desc = court_position_education_intrigue_trait
+		}
+	}	
+}
+education_intrigue_value_40pt = {
+	if = {
+		limit = {
+			has_trait = education_intrigue_5
+		}
+		add = {
+			value = 50
+			desc = court_position_education_intrigue_trait
+		}
+	}
+	else_if = {
+		limit = {
+			has_trait = education_intrigue_4
+		}
+		add = {
+			value = 40
+			desc = court_position_education_intrigue_trait
+		}
+	}
+	else_if = {
+		limit = {
+			has_trait = education_intrigue_3
+		}
+		add = {
+			value = 30
+			desc = court_position_education_intrigue_trait
+		}
+	}
+	else_if = {
+		limit = {
+			has_trait = education_intrigue_2
+		}
+		add = {
+			value = 20
+			desc = court_position_education_intrigue_trait
+		}
+	}
+	else_if = {
+		limit = {
+			has_trait = education_intrigue_1
+		}
+		add = {
+			value = 10
+			desc = court_position_education_intrigue_trait
+		}
+	}	
+}
+
+##KET## PERSONALITY SCORES
+personality_martial_value_5pt = {
+	if = {	limit = {	has_trait = brave		}	add = {	value = 5
+			desc = court_position_brave_trait
+		}
+	}
+	if = {	limit = {	has_trait = zealous		}	add = {	value = 5
+			desc = court_position_zealous_trait
+		}
+	}
+	if = {	limit = {	has_trait = wrathful	}	add = {	value = 5
+			desc = court_position_wrathful_trait
+		}
+	}
+	if = {	limit = {	has_trait = vengeful	}	add = {	value = 5
+			desc = court_position_vengeful_trait
+		}
+	}
+	if = {	limit = {	has_trait = craven		}	add = {	value = -2
+			desc = court_position_craven_trait
+		}
+	}
+	if = {	limit = {	has_trait = lazy		}	add = {	value = -2
+			desc = court_position_lazy_trait
+		}
+	}
+}
+personality_martial_value_10pt = {
+	if = {
+		limit = {
+			has_trait = brave
+		}
+		add = {
+			value = 10
+			desc = court_position_brave_trait
+		}
+	}
+	if = {
+		limit = {
+			has_trait = zealous
+		}
+		add = {
+			value = 10
+			desc = court_position_zealous_trait
+		}
+	}
+	if = {
+		limit = {
+			has_trait = wrathful
+		}
+		add = {
+			value = 10
+			desc = court_position_wrathful_trait
+		}
+	}
+	if = {
+		limit = {
+			has_trait = vengeful
+		}
+		add = {
+			value =10
+			desc = court_position_vengeful_trait
+		}
+	}
+	if = {
+		limit = {
+			has_trait = craven
+		}
+		add = {
+			value = -2
+			desc = court_position_craven_trait
+		}
+	}
+	if = {
+		limit = {
+			has_trait = lazy
+		}
+		add = {
+			value = -2
+			desc = court_position_lazy_trait
+		}
+	}
+}
+personality_martial_value_15pt = {
+	if = {
+		limit = {
+			has_trait = brave
+		}
+		add = {
+			value = 15
+			desc = court_position_brave_trait
+		}
+	}
+	if = {
+		limit = {
+			has_trait = zealous
+		}
+		add = {
+			value = 15
+			desc = court_position_zealous_trait
+		}
+	}
+	if = {
+		limit = {
+			has_trait = wrathful
+		}
+		add = {
+			value = 15
+			desc = court_position_wrathful_trait
+		}
+	}
+	if = {
+		limit = {
+			has_trait = vengeful
+		}
+		add = {
+			value = 15
+			desc = court_position_vengeful_trait
+		}
+	}
+	if = {
+		limit = {
+			has_trait = craven
+		}
+		add = {
+			value = -15
+			desc = court_position_craven_trait
+		}
+	}
+	if = {
+		limit = {
+			has_trait = lazy
+		}
+		add = {
+			value = -15
+			desc = court_position_lazy_trait
+		}
+	}
+}
+
+personality_diplomacy_value_5pt = {
+	if = {
+		limit = {
+			has_trait = diligent
+		}
+		add = {
+			value = 5
+			desc = court_position_diligent_trait
+		}
+	}
+	if = {
+		limit = {
+			has_trait = fickle
+		}
+		add = {
+			value = 5
+			desc = court_position_fickle_trait
+		}
+	}
+	if = {
+		limit = {
+			has_trait = forgiving
+		}
+		add = {
+			value = 5
+			desc = court_position_forgiving_trait
+		}
+	}
+	if = {
+		limit = {
+			has_trait = generous
+		}
+		add = {
+			value = 5
+			desc = court_position_generous_trait
+		}
+	}
+	if = {
+		limit = {
+			has_trait = gregarious
+		}
+		add = {
+			value = 5
+			desc = court_position_gregarious_trait
+		}
+	}
+	if = {
+		limit = {
+			has_trait = honest
+		}
+		add = {
+			value = 5
+			desc = court_position_henst_trait
+		}
+	}
+	if = {
+		limit = {
+			has_trait = greedy
+		}
+		add = {
+			value = -2
+			desc = court_position_greedy_trait
+		}
+	}
+	if = {
+		limit = {
+			has_trait = shy
+		}
+		add = {
+			value = -2
+			desc = court_position_shy_trait
+		}
+	}
+	if = {
+		limit = {
+			has_trait = deceitful
+		}
+		add = {
+			value = -5
+			desc = court_position_deceitful_trait
+		}
+	}
+}
+personality_diplomacy_value_10pt = {
+	if = {
+		limit = {
+			has_trait = diligent
+		}
+		add = {
+			value = 10
+			desc = court_position_diligent_trait
+		}
+	}
+	if = {
+		limit = {
+			has_trait = fickle
+		}
+		add = {
+			value = 10
+			desc = court_position_fickle_trait
+		}
+	}
+	if = {
+		limit = {
+			has_trait = forgiving
+		}
+		add = {
+			value = 10
+			desc = court_position_forgiving_trait
+		}
+	}
+	if = {
+		limit = {
+			has_trait = generous
+		}
+		add = {
+			value = 10
+			desc = court_position_generous_trait
+		}
+	}
+	if = {
+		limit = {
+			has_trait = gregarious
+		}
+		add = {
+			value = 10
+			desc = court_position_gregarious_trait
+		}
+	}
+	if = {
+		limit = {
+			has_trait = honest
+		}
+		add = {
+			value = 10
+			desc = court_position_henst_trait
+		}
+	}
+	if = {
+		limit = {
+			has_trait = greedy
+		}
+		add = {
+			value = -5
+			desc = court_position_greedy_trait
+		}
+	}
+	if = {
+		limit = {
+			has_trait = shy
+		}
+		add = {
+			value = -5
+			desc = court_position_shy_trait
+		}
+	}
+	if = {
+		limit = {
+			has_trait = deceitful
+		}
+		add = {
+			value = -10
+			desc = court_position_deceitful_trait
+		}
+	}
+}
+personality_diplomacy_value_15pt = {
+	if = {
+		limit = {
+			has_trait = diligent
+		}
+		add = {
+			value = 15
+			desc = court_position_diligent_trait
+		}
+	}
+	if = {
+		limit = {
+			has_trait = fickle
+		}
+		add = {
+			value = 15
+			desc = court_position_fickle_trait
+		}
+	}
+	if = {
+		limit = {
+			has_trait = forgiving
+		}
+		add = {
+			value = 15
+			desc = court_position_forgiving_trait
+		}
+	}
+	if = {
+		limit = {
+			has_trait = generous
+		}
+		add = {
+			value = 15
+			desc = court_position_generous_trait
+		}
+	}
+	if = {
+		limit = {
+			has_trait = gregarious
+		}
+		add = {
+			value = 15
+			desc = court_position_gregarious_trait
+		}
+	}
+	if = {
+		limit = {
+			has_trait = honest
+		}
+		add = {
+			value = 15
+			desc = court_position_henst_trait
+		}
+	}
+	if = {
+		limit = {
+			has_trait = greedy
+		}
+		add = {
+			value = -10
+			desc = court_position_greedy_trait
+		}
+	}
+	if = {
+		limit = {
+			has_trait = shy
+		}
+		add = {
+			value = -10
+			desc = court_position_shy_trait
+		}
+	}
+	if = {
+		limit = {
+			has_trait = deceitful
+		}
+		add = {
+			value = -15
+			desc = court_position_deceitful_trait
+		}
+	}
+}
+
+personality_learning_value_5pt = {
+	if = {
+		limit = {
+			has_trait = chaste
+		}
+		add = {
+			value = 5
+			desc = court_position_chaste_trait
+		}
+	}
+	if = {
+		limit = {
+			has_trait = content
+		}
+		add = {
+			value = 5
+			desc = court_position_content_trait
+		}
+	}	
+	if = {
+		limit = {
+			has_trait = diligent
+		}
+		add = {
+			value = 5
+			desc = court_position_diligent_trait
+		}
+	}
+	if = {
+		limit = {
+			has_trait = patient
+		}
+		add = {
+			value = 5
+			desc = court_position_generous_trait
+		}
+	}
+	if = {
+		limit = {
+			has_trait = arbitrary
+		}
+		add = {
+			value = -2
+			desc = court_position_arbitrary_trait
+		}
+	}
+	if = {
+		limit = {
+			has_trait = impatient
+		}
+		add = {
+			value = -2
+			desc = court_position_impatient_trait
+		}
+	}
+}
+personality_learning_value_10pt = {
+	if = {
+		limit = {
+			has_trait = chaste
+		}
+		add = {
+			value = 10
+			desc = court_position_chaste_trait
+		}
+	}
+	if = {
+		limit = {
+			has_trait = content
+		}
+		add = {
+			value = 10
+			desc = court_position_content_trait
+		}
+	}	
+	if = {
+		limit = {
+			has_trait = diligent
+		}
+		add = {
+			value = 10
+			desc = court_position_diligent_trait
+		}
+	}
+	if = {
+		limit = {
+			has_trait = patient
+		}
+		add = {
+			value = 10
+			desc = court_position_generous_trait
+		}
+	}
+	if = {
+		limit = {
+			has_trait = arbitrary
+		}
+		add = {
+			value = -5
+			desc = court_position_arbitrary_trait
+		}
+	}
+	if = {
+		limit = {
+			has_trait = impatient
+		}
+		add = {
+			value = -5
+			desc = court_position_impatient_trait
+		}
+	}
+}
+personality_learning_value_15pt = {
+	if = {
+		limit = {
+			has_trait = chaste
+		}
+		add = {
+			value = 15
+			desc = court_position_chaste_trait
+		}
+	}
+	if = {
+		limit = {
+			has_trait = content
+		}
+		add = {
+			value = 15
+			desc = court_position_content_trait
+		}
+	}	
+	if = {
+		limit = {
+			has_trait = diligent
+		}
+		add = {
+			value = 15
+			desc = court_position_diligent_trait
+		}
+	}
+	if = {
+		limit = {
+			has_trait = patient
+		}
+		add = {
+			value = 15
+			desc = court_position_generous_trait
+		}
+	}
+	if = {
+		limit = {
+			has_trait = arbitrary
+		}
+		add = {
+			value = -10
+			desc = court_position_arbitrary_trait
+		}
+	}
+	if = {
+		limit = {
+			has_trait = impatient
+		}
+		add = {
+			value = -10
+			desc = court_position_impatient_trait
+		}
+	}
+}
+
+personality_stewardship_value_5pt = {
+	if = {
+		limit = {
+			has_trait = diligent
+		}
+		add = {
+			value = 5
+			desc = court_position_diligent_trait
+		}
+	}
+	if = {
+		limit = {
+			has_trait = just
+		}
+		add = {
+			value = 5
+			desc = court_position_just_trait
+		}
+	}	
+	if = {
+		limit = {
+			has_trait = temperate
+		}
+		add = {
+			value = 5
+			desc = court_position_temperate_trait
+		}
+	}
+	if = {
+		limit = {
+			has_trait = stubborn
+		}
+		add = {
+			value = 5
+			desc = court_position_stubborn_trait
+		}
+	}
+	if = {
+		limit = {
+			has_trait = greedy
+		}
+		add = {
+			value = 5
+			desc = court_position_greedy_trait
+		}
+	}
+	if = {
+		limit = {
+			has_trait = lazy
+		}
+		add = {
+			value = -2
+			desc = court_position_lazy_trait
+		}
+	}
+	if = {
+		limit = {
+			has_trait = arbitrary
+		}
+		add = {
+			value = -2
+			desc = court_position_arbitrary_trait
+		}
+	}
+	if = {
+		limit = {
+			has_trait = gluttonous
+		}
+		add = {
+			value = -2
+			desc = court_position_gluttonous_trait
+		}
+	}
+}
+personality_stewardship_value_10pt = {
+	if = {
+		limit = {
+			has_trait = diligent
+		}
+		add = {
+			value = 10
+			desc = court_position_diligent_trait
+		}
+	}
+	if = {
+		limit = {
+			has_trait = just
+		}
+		add = {
+			value = 10
+			desc = court_position_just_trait
+		}
+	}	
+	if = {
+		limit = {
+			has_trait = temperate
+		}
+		add = {
+			value = 10
+			desc = court_position_temperate_trait
+		}
+	}
+	if = {
+		limit = {
+			has_trait = stubborn
+		}
+		add = {
+			value = 10
+			desc = court_position_stubborn_trait
+		}
+	}
+	if = {
+		limit = {
+			has_trait = greedy
+		}
+		add = {
+			value = 10
+			desc = court_position_greedy_trait
+		}
+	}
+	if = {
+		limit = {
+			has_trait = lazy
+		}
+		add = {
+			value = -5
+			desc = court_position_lazy_trait
+		}
+	}
+	if = {
+		limit = {
+			has_trait = arbitrary
+		}
+		add = {
+			value = -5
+			desc = court_position_arbitrary_trait
+		}
+	}
+	if = {
+		limit = {
+			has_trait = gluttonous
+		}
+		add = {
+			value = -5
+			desc = court_position_gluttonous_trait
+		}
+	}
+}
+personality_stewardship_value_15pt = {
+	if = {
+		limit = {
+			has_trait = diligent
+		}
+		add = {
+			value = 15
+			desc = court_position_diligent_trait
+		}
+	}
+	if = {
+		limit = {
+			has_trait = just
+		}
+		add = {
+			value = 15
+			desc = court_position_just_trait
+		}
+	}	
+	if = {
+		limit = {
+			has_trait = temperate
+		}
+		add = {
+			value = 15
+			desc = court_position_temperate_trait
+		}
+	}
+	if = {
+		limit = {
+			has_trait = stubborn
+		}
+		add = {
+			value = 15
+			desc = court_position_stubborn_trait
+		}
+	}
+	if = {
+		limit = {
+			has_trait = greedy
+		}
+		add = {
+			value = 15
+			desc = court_position_greedy_trait
+		}
+	}
+	if = {
+		limit = {
+			has_trait = lazy
+		}
+		add = {
+			value = -10
+			desc = court_position_lazy_trait
+		}
+	}
+	if = {
+		limit = {
+			has_trait = arbitrary
+		}
+		add = {
+			value = -10
+			desc = court_position_arbitrary_trait
+		}
+	}
+	if = {
+		limit = {
+			has_trait = gluttonous
+		}
+		add = {
+			value = -10
+			desc = court_position_gluttonous_trait
+		}
+	}
+}
+
+personality_intrigue_value_5pt = {
+	if = {
+		limit = {
+			has_trait = lustful
+		}
+		add = {
+			value = 5
+			desc = court_position_lustful_trait
+		}
+	}
+	if = {
+		limit = {
+			has_trait = vengeful
+		}
+		add = {
+			value = 5
+			desc = court_position_vengeful_trait
+		}
+	}	
+	if = {
+		limit = {
+			has_trait = cynical
+		}
+		add = {
+			value = 5
+			desc = court_position_cynical_trait
+		}
+	}
+	if = {
+		limit = {
+			has_trait = arbitrary
+		}
+		add = {
+			value = 5
+			desc = court_position_arbitrary_trait
+		}
+	}
+	if = {
+		limit = {
+			has_trait = paranoid
+		}
+		add = {
+			value = 5
+			desc = court_position_paranoid_trait
+		}
+	}
+	if = {
+		limit = {
+			has_trait = callous
+		}
+		add = {
+			value = 5
+			desc = court_position_callous_trait
+		}
+	}
+	if = {
+		limit = {
+			has_trait = sadistic
+		}
+		add = {
+			value = 5
+			desc = court_position_sadistic_trait
+		}
+	}
+	if = {
+		limit = {
+			has_trait = forgiving
+		}
+		add = {
+			value = -2
+			desc = court_position_forgiving_trait
+		}
+	}
+	if = {
+		limit = {
+			has_trait = honest
+		}
+		add = {
+			value = -2
+			desc = court_position_honest_trait
+		}
+	}
+	if = {
+		limit = {
+			has_trait = just
+		}
+		add = {
+			value = -2
+			desc = court_position_just_trait
+		}
+	}
+	if = {
+		limit = {
+			has_trait = compassionate
+		}
+		add = {
+			value = -2
+			desc = court_position_compassionate_trait
+		}
+	}
+}
+personality_intrigue_value_10pt = {
+	if = {
+		limit = {
+			has_trait = lustful
+		}
+		add = {
+			value = 10
+			desc = court_position_lustful_trait
+		}
+	}
+	if = {
+		limit = {
+			has_trait = vengeful
+		}
+		add = {
+			value = 10
+			desc = court_position_vengeful_trait
+		}
+	}	
+	if = {
+		limit = {
+			has_trait = cynical
+		}
+		add = {
+			value = 10
+			desc = court_position_cynical_trait
+		}
+	}
+	if = {
+		limit = {
+			has_trait = arbitrary
+		}
+		add = {
+			value = 10
+			desc = court_position_arbitrary_trait
+		}
+	}
+	if = {
+		limit = {
+			has_trait = paranoid
+		}
+		add = {
+			value = 10
+			desc = court_position_paranoid_trait
+		}
+	}
+	if = {
+		limit = {
+			has_trait = callous
+		}
+		add = {
+			value = 10
+			desc = court_position_callous_trait
+		}
+	}
+	if = {
+		limit = {
+			has_trait = sadistic
+		}
+		add = {
+			value = 10
+			desc = court_position_sadistic_trait
+		}
+	}
+	if = {
+		limit = {
+			has_trait = forgiving
+		}
+		add = {
+			value = -5
+			desc = court_position_forgiving_trait
+		}
+	}
+	if = {
+		limit = {
+			has_trait = honest
+		}
+		add = {
+			value = -5
+			desc = court_position_honest_trait
+		}
+	}
+	if = {
+		limit = {
+			has_trait = just
+		}
+		add = {
+			value = -5
+			desc = court_position_just_trait
+		}
+	}
+	if = {
+		limit = {
+			has_trait = compassionate
+		}
+		add = {
+			value = -5
+			desc = court_position_compassionate_trait
+		}
+	}
+}
+personality_intrigue_value_15pt = {
+	if = {
+		limit = {
+			has_trait = lustful
+		}
+		add = {
+			value = 15
+			desc = court_position_lustful_trait
+		}
+	}
+	if = {
+		limit = {
+			has_trait = vengeful
+		}
+		add = {
+			value = 15
+			desc = court_position_vengeful_trait
+		}
+	}	
+	if = {
+		limit = {
+			has_trait = cynical
+		}
+		add = {
+			value = 15
+			desc = court_position_cynical_trait
+		}
+	}
+	if = {
+		limit = {
+			has_trait = arbitrary
+		}
+		add = {
+			value = 15
+			desc = court_position_arbitrary_trait
+		}
+	}
+	if = {
+		limit = {
+			has_trait = paranoid
+		}
+		add = {
+			value = 15
+			desc = court_position_paranoid_trait
+		}
+	}
+	if = {
+		limit = {
+			has_trait = callous
+		}
+		add = {
+			value = 15
+			desc = court_position_callous_trait
+		}
+	}
+	if = {
+		limit = {
+			has_trait = sadistic
+		}
+		add = {
+			value = 15
+			desc = court_position_sadistic_trait
+		}
+	}
+	if = {
+		limit = {
+			has_trait = forgiving
+		}
+		add = {
+			value = -10
+			desc = court_position_forgiving_trait
+		}
+	}
+	if = {
+		limit = {
+			has_trait = honest
+		}
+		add = {
+			value = -10
+			desc = court_position_honest_trait
+		}
+	}
+	if = {
+		limit = {
+			has_trait = just
+		}
+		add = {
+			value = -10
+			desc = court_position_just_trait
+		}
+	}
+	if = {
+		limit = {
+			has_trait = compassionate
+		}
+		add = {
+			value = -10
+			desc = court_position_compassionate_trait
+		}
+	}
+}
+
+personality_prowess_value_5pt = {
+	if = {	limit = {	has_trait = brave		}	add = {	value = 5
+			desc = court_position_brave_trait
+		}
+	}
+	if = {	limit = {	has_trait = vengeful	}	add = {	value = 5
+			desc = court_position_vengeful_trait
+		}
+	}	
+	if = {	limit = {	has_trait = sadistic	}	add = {	value = 5
+			desc = court_position_sadistic_trait
+		}
+	}
+	if = {	limit = {	has_trait = ambitious	}	add = {	value = 5
+			desc = court_position_ambitious_trait
+		}
+	}
+	if = {	limit = {	has_trait = craven		}	add = {	value = -2
+			desc = court_position_compassionate_trait
+		}
+	}
+}
+personality_prowess_value_10pt = {
+	if = {
+		limit = {
+			has_trait = brave
+		}
+		add = {
+			value = 10
+			desc = court_position_brave_trait
+		}
+	}
+	if = {
+		limit = {
+			has_trait = vengeful
+		}
+		add = {
+			value = 10
+			desc = court_position_vengeful_trait
+		}
+	}	
+	if = {
+		limit = {
+			has_trait = sadistic
+		}
+		add = {
+			value = 10
+			desc = court_position_sadistic_trait
+		}
+	}
+	if = {
+		limit = {
+			has_trait = ambitious
+		}
+		add = {
+			value = 10
+			desc = court_position_ambitious_trait
+		}
+	}
+	if = {
+		limit = {
+			has_trait = craven
+		}
+		add = {
+			value = -5
+			desc = court_position_compassionate_trait
+		}
+	}
+}
+personality_prowess_value_15pt = {
+	if = {
+		limit = {
+			has_trait = brave
+		}
+		add = {
+			value = 15
+			desc = court_position_brave_trait
+		}
+	}
+	if = {
+		limit = {
+			has_trait = vengeful
+		}
+		add = {
+			value = 15
+			desc = court_position_vengeful_trait
+		}
+	}	
+	if = {
+		limit = {
+			has_trait = sadistic
+		}
+		add = {
+			value = 15
+			desc = court_position_sadistic_trait
+		}
+	}
+	if = {
+		limit = {
+			has_trait = ambitious
+		}
+		add = {
+			value = 15
+			desc = court_position_ambitious_trait
+		}
+	}
+	if = {
+		limit = {
+			has_trait = craven
+		}
+		add = {
+			value = -10
+			desc = court_position_compassionate_trait
+		}
+	}
+}
+
+##KET## MINOR PERSONALITY SCORES (GOOD)
+personality_arrogant_value_5pt = {
+	if = {
+		limit = { has_trait = arrogant }
+		add = {	value = 5
+				desc = court_position_arrogant_trait } }
+}
+personality_arrogant_value_10pt = {
+	if = {
+		limit = { has_trait = arrogant }
+		add = {	value = 10
+				desc = court_position_arrogant_trait } }
+}
+personality_arrogant_value_15pt = {
+	if = {
+		limit = { has_trait = arrogant }
+		add = {	value = 15
+				desc = court_position_arrogant_trait } }
+}
+personality_arrogant_value_-5pt = {
+	if = {
+		limit = { has_trait = arrogant }
+		add = {	value = -5
+				desc = court_position_arrogant_trait } }
+}
+personality_arrogant_value_-10pt = {
+	if = {
+		limit = { has_trait = arrogant }
+		add = {	value = -10
+				desc = court_position_arrogant_trait } }
+}
+personality_arrogant_value_-15pt = {
+	if = {
+		limit = { has_trait = arrogant }
+		add = {	value = -15
+				desc = court_position_arrogant_trait } }
+}
+
+personality_ambitious_value_5pt = {
+	if = {
+		limit = { has_trait = ambitious }
+		add = {	value = 5
+				desc = court_position_ambitious_trait } }
+}
+personality_ambitious_value_10pt = {
+	if = {
+		limit = { has_trait = ambitious }
+		add = {	value = 10
+				desc = court_position_ambitious_trait } }
+}
+personality_ambitious_value_15pt = {
+	if = {
+		limit = { has_trait = ambitious }
+		add = {	value = 15
+				desc = court_position_ambitious_trait } }
+}
+personality_ambitious_value_-5pt = {
+	if = {
+		limit = { has_trait = ambitious }
+		add = {	value = -5
+				desc = court_position_ambitious_trait } }
+}
+personality_ambitious_value_-10pt = {
+	if = {
+		limit = { has_trait = ambitious }
+		add = {	value = -10
+				desc = court_position_ambitious_trait } }
+}
+personality_ambitious_value_-15pt = {
+	if = {
+		limit = { has_trait = ambitious }
+		add = {	value = -15
+				desc = court_position_ambitious_trait } }
+}
+
+personality_calm_value_5pt = {
+	if = {
+		limit = { has_trait = calm }
+		add = {	value = 5
+				desc = court_position_calm_trait } }
+}
+personality_calm_value_10pt = {
+	if = {
+		limit = { has_trait = calm }
+		add = {	value = 10
+				desc = court_position_calm_trait } }
+}
+personality_calm_value_15pt = {
+	if = {
+		limit = { has_trait = calm }
+		add = {	value = 15
+				desc = court_position_calm_trait } }
+}
+personality_calm_value_-5pt = {
+	if = {
+		limit = { has_trait = calm }
+		add = {	value = -5
+				desc = court_position_calm_trait } }
+}
+personality_calm_value_-10pt = {
+	if = {
+		limit = { has_trait = calm }
+		add = {	value = -10
+				desc = court_position_calm_trait } }
+}
+personality_calm_value_-15pt = {
+	if = {
+		limit = { has_trait = calm }
+		add = {	value = -15
+				desc = court_position_calm_trait } }
+}
+
+personality_humble_value_5pt = {
+	if = {
+		limit = { has_trait = humble }
+		add = {	value = 5
+				desc = court_position_humble_trait } }
+}
+personality_humble_value_10pt = {
+	if = {
+		limit = { has_trait = humble }
+		add = {	value = 10
+				desc = court_position_humble_trait } }
+}
+personality_humble_value_15pt = {
+	if = {
+		limit = { has_trait = humble }
+		add = {	value = 15
+				desc = court_position_humble_trait } }
+}
+personality_humble_value_-5pt = {
+	if = {
+		limit = { has_trait = humble }
+		add = {	value = -5
+				desc = court_position_humble_trait } }
+}
+personality_humble_value_-10pt = {
+	if = {
+		limit = { has_trait = humble }
+		add = {	value = -10
+				desc = court_position_humble_trait } }
+}
+personality_humble_value_-15pt = {
+	if = {
+		limit = { has_trait = humble }
+		add = {	value = -15
+				desc = court_position_humble_trait } }
+}
+
+personality_trusting_value_5pt = {
+	if = {
+		limit = { has_trait = trusting }
+		add = {	value = 5
+				desc = court_position_trusting_trait } }
+}
+personality_trusting_value_10pt = {
+	if = {
+		limit = { has_trait = trusting }
+		add = {	value = 10
+				desc = court_position_trusting_trait } }
+}
+personality_trusting_value_15pt = {
+	if = {
+		limit = { has_trait = trusting }
+		add = {	value = 15
+				desc = court_position_trusting_trait } }
+}
+personality_trusting_value_-5pt = {
+	if = {
+		limit = { has_trait = trusting }
+		add = {	value = -5
+				desc = court_position_trusting_trait } }
+}
+personality_trusting_value_-10pt = {
+	if = {
+		limit = { has_trait = trusting }
+		add = {	value = -10
+				desc = court_position_trusting_trait } }
+}
+personality_trusting_value_-15pt = {
+	if = {
+		limit = { has_trait = trusting }
+		add = {	value = -15
+				desc = court_position_trusting_trait } }
+}
+
+## KET ## PHYSICAL & HEALTH
+
+high_skills_ratings_value_10pt  = {
+		if = {
+			limit = {
+				diplomacy >= high_skill_rating
+				martial >= high_skill_rating
+				stewardship >= high_skill_rating
+				intrigue >= high_skill_rating
+				learning >= high_skill_rating
+			}
+			add = { 
+				value = 10
+				desc = court_position_high_skills_trait
+			}
+		}
+} 
+high_skills_ratings_value_20pt  = {
+		if = {
+			limit = {
+				diplomacy >= high_skill_rating
+				martial >= high_skill_rating
+				stewardship >= high_skill_rating
+				intrigue >= high_skill_rating
+				learning >= high_skill_rating
+			}
+			add = { 
+				value = 20
+				desc = court_position_high_skills_trait
+			}
+		}
+} 
+high_skills_ratings_value_30pt  = {
+		if = {
+			limit = {
+				diplomacy >= high_skill_rating
+				martial >= high_skill_rating
+				stewardship >= high_skill_rating
+				intrigue >= high_skill_rating
+				learning >= high_skill_rating
+			}
+			add = { 
+				value = 30
+				desc = court_position_high_skills_trait
+			}
+		}
+} 
+ 
+general_intellect_value  = {
+	if = {
+		limit = {
+			has_trait = shrewd
+		}
+		add = {
+			value = 5
+			desc = court_position_shrewd_trait
+		}
+	}
+	if = {
+		limit = {
+			has_trait = intellect_good_3
+		}
+		add = {
+			value = 20
+			desc = court_position_intellect_good_3_trait
+		}
+	}
+	else_if = {
+		limit = {
+			has_trait = intellect_good_2
+		}
+		add = {
+			value = 15
+			desc = court_position_intellect_good_2_trait
+		}
+	}
+	else_if = {
+		limit = {
+			has_trait = intellect_good_1
+		}
+		add = {
+			value = 10
+			desc = court_position_intellect_good_1_trait
+		}
+	}
+	else_if = {
+		limit = {
+			has_trait = intellect_bad_3
+		}
+		add = {
+			value = -20
+			desc = court_position_intellect_bad_3_trait
+		}
+	}
+	else_if = {
+		limit = {
+			has_trait = intellect_bad_2
+		}
+		add = {
+			value = -15
+			desc = court_position_intellect_bad_2_trait
+		}
+	}
+	else_if = {
+		limit = {
+			has_trait = intellect_bad_1
+		}
+		add = {
+			value = -10
+			desc = court_position_intellect_bad_1_trait
+		}
+	}
+}
+general_physique_value  = {
+	if = {
+		limit = {
+			has_trait = strong
+		}
+		add = {
+			value = 10
+			desc = court_position_strong_trait
+		}
+	}
+	if = {
+		limit = {
+			has_trait = physique_good_3
+		}
+		add = {
+			value = 20
+			desc = court_position_physique_good_3_trait
+		}
+	}
+	else_if = {
+		limit = {
+			has_trait = physique_good_2
+		}
+		add = {
+			value = 15
+			desc = court_position_physique_good_2_trait
+		}
+	}
+	else_if = {
+		limit = {
+			has_trait = physique_good_1
+		}
+		add = {
+			value = 10
+			desc = court_position_physique_good_1_trait
+		}
+	}
+	else_if = {
+		limit = {
+			has_trait = physique_bad_3
+		}
+		add = {
+			value = -20
+			desc = court_position_physique_bad_3_trait
+		}
+	}
+	else_if = {
+		limit = {
+			has_trait = physique_bad_2
+		}
+		add = {
+			value = -15
+			desc = court_position_physique_bad_2_trait
+		}
+	}
+	else_if = {
+		limit = {
+			has_trait = physique_bad_1
+		}
+		add = {
+			value = -10
+			desc = court_position_physique_bad_1_trait
+		}
+	}
+}
+general_beauty_value  = {
+	if = {
+		limit = {
+			has_trait = disfigured
+		}
+		add = {
+			value = -20
+			desc = court_position_disfigured_trait
+		}
+	}
+	if = {
+		limit = {
+			has_trait = beauty_good_3
+		}
+		add = {
+			value = 20
+			desc = court_position_beauty_good_3_trait
+		}
+	}
+	else_if = {
+		limit = {
+			has_trait = beauty_good_2
+		}
+		add = {
+			value = 15
+			desc = court_position_beauty_good_2_trait
+		}
+	}
+	else_if = {
+		limit = {
+			has_trait = beauty_good_1
+		}
+		add = {
+			value = 10
+			desc = court_position_beauty_good_1_trait
+		}
+	}
+	else_if = {
+		limit = {
+			has_trait = beauty_bad_3
+		}
+		add = {
+			value = -20
+			desc = court_position_beauty_bad_trait
+		}
+	}
+	else_if = {
+		limit = {
+			has_trait = beauty_bad_2
+		}
+		add = {
+			value = -15
+			desc = court_position_beauty_bad_2_trait
+		}
+	}
+	else_if = {
+		limit = {
+			has_trait = beauty_bad_1
+		}
+		add = {
+			value = -10
+			desc = court_position_beauty_bad_1_trait
+		}
+	}
+}
+
+health_penalty_values_low = {
+	if = {
+		limit = {
+			has_trait = dull
+		}
+		add = {
+			value = -5
+			desc = court_position_dull_trait
+		}
+	}
+	if = {
+		limit = {
+			has_trait = weak
+		}
+		add = {
+			value = -5
+			desc = court_position_weak_trait
+		}
+	}
+	if = {
+		limit = {
+			has_trait = one_legged
+		}
+		add = {
+			value = -5
+			desc = court_position_one_legged_trait
+		}
+	}
+	if = {
+		limit = {
+			has_trait = one_eyed
+		}
+		add = {
+			value = -5
+			desc = court_position_one_eyed_trait
+		}
+	}
+	if = {
+		limit = {
+			has_trait = maimed
+		}
+		add = {
+			value = -15
+			desc = court_position_maimed_trait
+		}
+	}
+	if = {
+		limit = {
+			has_trait = blind
+		}
+		add = {
+			value = -20
+			desc = court_position_blind_trait
+		}
+	}
+	if = {
+		limit = {
+			has_trait = wounded_2
+		}
+		add = {
+			value = -5
+			desc = court_position_wounded_2_trait
+		}
+	}
+	if = {
+		limit = {
+			has_trait = wounded_3
+		}
+		add = {
+			value = -15
+			desc = court_position_wounded_3_trait
+		}
+	}
+	if = {
+		limit = {
+			has_trait = infirm
+		}
+		add = {
+			value = -50
+			desc = court_position_infirm_trait
+		}
+	}
+
+}
+health_penalty_values_high = {
+	if = {
+		limit = {
+			has_trait = dull
+		}
+		add = {
+			value = -10
+			desc = court_position_dull_trait
+		}
+	}
+	if = {
+		limit = {
+			has_trait = weak
+		}
+		add = {
+			value = -10
+			desc = court_position_weak_trait
+		}
+	}
+	if = {
+		limit = {
+			has_trait = one_legged
+		}
+		add = {
+			value = -10
+			desc = court_position_one_legged_trait
+		}
+	}
+	if = {
+		limit = {
+			has_trait = one_eyed
+		}
+		add = {
+			value = -10
+			desc = court_position_one_eyed_trait
+		}
+	}
+	if = {
+		limit = {
+			has_trait = maimed
+		}
+		add = {
+			value = -25
+			desc = court_position_maimed_trait
+		}
+	}
+	if = {
+		limit = {
+			has_trait = blind
+		}
+		add = {
+			value = -40
+			desc = court_position_blind_trait
+		}
+	}
+	if = {
+		limit = {
+			has_trait = wounded_1
+		}
+		add = {
+			value = -5
+			desc = court_position_wounded_1_trait
+		}
+	}
+	if = {
+		limit = {
+			has_trait = wounded_2
+		}
+		add = {
+			value = -15
+			desc = court_position_wounded_2_trait
+		}
+	}
+	if = {
+		limit = {
+			has_trait = wounded_3
+		}
+		add = {
+			value = -25
+			desc = court_position_wounded_3_trait
+		}
+	}
+	if = {
+		limit = {
+			has_trait = infirm
+		}
+		add = {
+			value = -75
+			desc = court_position_infirm_trait
+		}
+	}
+
+}
+
+occupation_busy_score_value_10pt = {
+	if = { 	
+		limit = { 
+			is_landed = yes
+		}
+		add = { 
+			value = -10
+			desc = court_position_landed_penalty
+		}
+	} 
+}
+occupation_busy_score_value_20pt = {
+	if = { 	
+		limit = { 
+			is_landed = yes
+		}
+		add = { 
+			value = -20
+			desc = court_position_landed_penalty
+		}
+	} 
+}
+occupation_busy_score_value_30pt = {
+	if = { 	
+		limit = { 
+			is_landed = yes
+		}
+		add = { 
+			value = -30
+			desc = court_position_landed_penalty
+		}
+	} 
+}
+
+##KET## COURT EXPERIENCE TRAITS
+
+court_trait_diplomatic_value_20pt = {
+	if = {
+		limit = {
+			has_trait = diplomatic_court_1
+		}
+		add = {
+			value = 10
+			desc = court_position_diplomatic_1_trait
+		}
+	}
+	else_if = {
+		limit = {
+			has_trait = diplomatic_court_2
+		}
+		add = {
+			value = 20
+			desc = court_position_diplomatic_2_trait
+		}
+	}
+}
+court_trait_diplomatic_value_30pt = {
+	if = {
+		limit = {
+			has_trait = diplomatic_court_1
+		}
+		add = {
+			value = 15
+			desc = court_position_diplomatic_1_trait
+		}
+	}
+	else_if = {
+		limit = {
+			has_trait = diplomatic_court_2
+		}
+		add = {
+			value = 30
+			desc = court_position_diplomatic_2_trait
+		}
+	}
+}
+court_trait_diplomatic_value_40pt = {
+	if = {
+		limit = {
+			has_trait = diplomatic_court_1
+		}
+		add = {
+			value = 20
+			desc = court_position_diplomatic_1_trait
+		}
+	}
+	else_if = {
+		limit = {
+			has_trait = diplomatic_court_2
+		}
+		add = {
+			value = 40
+			desc = court_position_diplomatic_2_trait
+		}
+	}
+}
+
+court_trait_warlike_value_20pt = {
+	if = {
+		limit = {
+			has_trait = warlike_court_1
+		}
+		add = {
+			value = 10
+			desc = court_position_warlike_1_trait
+		}
+	}
+	else_if = {
+		limit = {
+			has_trait = warlike_court_2
+		}
+		add = {
+			value = 20
+			desc = court_position_warlike_2_trait
+		}
+	}
+}
+court_trait_warlike_value_30pt = {
+	if = {
+		limit = {
+			has_trait = warlike_court_1
+		}
+		add = {
+			value = 15
+			desc = court_position_warlike_1_trait
+		}
+	}
+	else_if = {
+		limit = {
+			has_trait = warlike_court_2
+		}
+		add = {
+			value = 30
+			desc = court_position_warlike_2_trait
+		}
+	}
+}
+court_trait_warlike_value_40pt = {
+	if = {
+		limit = {
+			has_trait = warlike_court_1
+		}
+		add = {
+			value = 20
+			desc = court_position_warlike_1_trait
+		}
+	}
+	else_if = {
+		limit = {
+			has_trait = warlike_court_2
+		}
+		add = {
+			value = 40
+			desc = court_position_warlike_2_trait
+		}
+	}
+}
+
+court_trait_administrative_value_20pt = {
+	if = {
+		limit = {
+			has_trait = administrative_court_1
+		}
+		add = {
+			value = 10
+			desc = court_position_administrative_1_trait
+		}
+	}
+	else_if = {
+		limit = {
+			has_trait = administrative_court_2
+		}
+		add = {
+			value = 20
+			desc = court_position_administrative_2_trait
+		}
+	}
+}
+court_trait_administrative_value_30pt = {
+	if = {
+		limit = {
+			has_trait = administrative_court_1
+		}
+		add = {
+			value = 15
+			desc = court_position_administrative_1_trait
+		}
+	}
+	else_if = {
+		limit = {
+			has_trait = administrative_court_2
+		}
+		add = {
+			value = 30
+			desc = court_position_administrative_2_trait
+		}
+	}
+}
+court_trait_administrative_value_40pt = {
+	if = {
+		limit = {
+			has_trait = administrative_court_1
+		}
+		add = {
+			value = 20
+			desc = court_position_administrative_1_trait
+		}
+	}
+	else_if = {
+		limit = {
+			has_trait = administrative_court_2
+		}
+		add = {
+			value = 40
+			desc = court_position_administrative_2_trait
+		}
+	}
+}
+
+court_trait_intrigue_value_20pt = {
+	if = {
+		limit = {
+			has_trait = intrigue_court_1
+		}
+		add = {
+			value = 10
+			desc = court_position_intrigue_1_trait
+		}
+	}
+	else_if = {
+		limit = {
+			has_trait = intrigue_court_2
+		}
+		add = {
+			value = 20
+			desc = court_position_intrigue_2_trait
+		}
+	}
+}
+court_trait_intrigue_value_30pt = {
+	if = {
+		limit = {
+			has_trait = intrigue_court_1
+		}
+		add = {
+			value = 15
+			desc = court_position_intrigue_1_trait
+		}
+	}
+	else_if = {
+		limit = {
+			has_trait = intrigue_court_2
+		}
+		add = {
+			value = 30
+			desc = court_position_intrigue_2_trait
+		}
+	}
+}
+court_trait_intrigue_value_40pt = {
+	if = {
+		limit = {
+			has_trait = intrigue_court_1
+		}
+		add = {
+			value = 20
+			desc = court_position_intrigue_1_trait
+		}
+	}
+	else_if = {
+		limit = {
+			has_trait = intrigue_court_2
+		}
+		add = {
+			value = 40
+			desc = court_position_intrigue_2_trait
+		}
+	}
+}
+
+court_trait_scholarly_value_20pt = {
+	if = {
+		limit = {
+			has_trait = scholarly_court_1
+		}
+		add = {
+			value = 10
+			desc = court_position_scholarly_1_trait
+		}
+	}
+	else_if = {
+		limit = {
+			has_trait = scholarly_court_2
+		}
+		add = {
+			value = 20
+			desc = court_position_scholarly_2_trait
+		}
+	}
+}
+court_trait_scholarly_value_30pt = {
+	if = {
+		limit = {
+			has_trait = scholarly_court_1
+		}
+		add = {
+			value = 15
+			desc = court_position_scholarly_1_trait
+		}
+	}
+	else_if = {
+		limit = {
+			has_trait = scholarly_court_2
+		}
+		add = {
+			value = 30
+			desc = court_position_scholarly_2_trait
+		}
+	}
+}
+court_trait_scholarly_value_40pt = {
+	if = {
+		limit = {
+			has_trait = scholarly_court_1
+		}
+		add = {
+			value = 20
+			desc = court_position_scholarly_1_trait
+		}
+	}
+	else_if = {
+		limit = {
+			has_trait = scholarly_court_2
+		}
+		add = {
+			value = 40
+			desc = court_position_scholarly_2_trait
+		}
+	}
+}
+
+## KET ### SPECIFIC BADS
+bad_traits_for_communication = {
+	if = {	limit = { has_trait = lisping }
+			add = {	value = -20
+			desc = court_position_lisping_trait }
+	}
+	if = {	limit = { has_trait = stuttering }
+			add = {	value = -20
+			desc = court_position_stuttering_trait }
+	}
+	if = {	limit = { has_trait = wheezing }
+			add = {	value = -20
+			desc = court_position_wheezing_trait }
+	}
+} 
+bad_traits_for_negotiation = {
+	if = {	limit = { has_trait = depressed }
+			add = {	value = -20
+			desc = court_position_depressed_trait }
+	}
+	if = {	limit = { has_trait = lunatic }
+			add = {	value = -20
+			desc = court_position_lunatic_trait }
+	}
+	if = {	limit = { has_trait = possessed }
+			add = {	value = -20
+			desc = court_position_possessed_trait }
+	}
+} 
+bad_traits_for_physical = {
+	if = {	limit = { has_trait = clubfooted }
+			add = {	value = -20
+			desc = court_position_clubfooted_trait }
+	}
+	if = {	limit = { has_trait = hunchbacked }
+			add = {	value = -10
+			desc = court_position_hunchbacked_trait }
+	}
+	if = {	limit = { has_trait = spindly }
+			add = {	value = -10
+			desc = court_position_spindly_trait }
+	}
+	if = {	limit = { has_trait = bleeder }
+			add = {	value = -5
+			desc = court_position_bleeder_trait }
+	}
+} 
+bad_traits_for_learning = {
+	if = {	limit = { has_trait = dull }
+			add = {	value = -20
+			desc = court_position_dull_trait }
+	}
+	if = {	limit = { has_trait = fornicator }
+			add = {	value = -10
+			desc = court_position_fornicator_trait }
+	}
+} 

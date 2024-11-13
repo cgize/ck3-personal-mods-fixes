@@ -1,0 +1,174 @@
+﻿mod_mass_convert_subjects_decision = {
+    picture = {
+        reference = "gfx/interface/illustrations/decisions/decision_personal_religious.dds"
+    }
+    desc = mod_mass_convert_subjects_decision_desc
+    decision_group_type = admin
+    
+    # Determinar si la decisión es visible
+    is_shown = { 
+      OR = {
+        any_vassal = { # Vasallos directos
+          NOT = { vassal_contract_has_flag = religiously_protected }
+          root = {
+            is_character_interaction_potentially_accepted = {
+              recipient = prev
+              interaction = demand_conversion_vassal_ruler_interaction
+            }
+          }
+        }
+        any_vassal_or_below = { # Vasallos indirectos
+          NOT = { vassal_contract_has_flag = religiously_protected }
+          exists = liege
+          NOT = { liege = root } # Filtra vasallos indirectos
+          root = {
+            is_character_interaction_potentially_accepted = {
+              recipient = prev
+              interaction = demand_conversion_vassal_ruler_interaction
+            }
+          }
+        }
+        any_courtier = { # Cortesanos
+          root = {
+            is_character_interaction_potentially_accepted = {
+              recipient = prev
+              interaction = ask_for_conversion_courtier_interaction
+            }
+          }
+        }
+        AND = { # Miembros de la casa
+          exists = house
+          house = {
+            any_house_member = {
+              root = {
+                is_character_interaction_potentially_accepted = {
+                  recipient = prev
+                  interaction = demand_conversion_interaction
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    
+    # Widget de opciones
+    widget = {
+      gui = "decision_view_widget_decision_option_list_controller"
+      controller = decision_option_list_controller
+  
+      item = { value = mod_convert_direct_vassals localization = mod_convert_direct_vassals_loc }
+      item = { value = mod_convert_indirect_vassals localization = mod_convert_indirect_vassals_loc }
+      item = { value = mod_convert_courtiers localization = mod_convert_courtiers_loc }
+      item = { value = mod_convert_house localization = mod_convert_house_loc }
+    }
+    
+    # Efecto de decisión
+    effect = {
+      # Conversión de vasallos directos
+      if = {
+        limit = { scope:mod_convert_direct_vassals = yes }
+        every_vassal = {
+          limit = { NOT = { vassal_contract_has_flag = religiously_protected } }
+          if = {
+            limit = {
+              root = {
+                is_character_interaction_potentially_accepted = {
+                  recipient = prev
+                  interaction = demand_conversion_vassal_ruler_interaction
+                }
+              }
+            }
+            run_interaction = {
+              interaction = demand_conversion_vassal_ruler_interaction
+              actor = root
+              recipient = this
+              send_threshold = decline
+            }
+          }
+        }
+      }
+  
+      # Conversión de vasallos indirectos
+      else_if = {
+        limit = { scope:mod_convert_indirect_vassals = yes }
+        every_vassal_or_below = {
+          limit = { NOT = { vassal_contract_has_flag = religiously_protected } }
+          if = {
+            limit = {
+              exists = liege
+              NOT = { liege = root }
+              root = {
+                is_character_interaction_potentially_accepted = {
+                  recipient = prev
+                  interaction = demand_conversion_vassal_ruler_interaction
+                }
+              }
+            }
+            run_interaction = {
+              interaction = demand_conversion_vassal_ruler_interaction
+              actor = root
+              recipient = this
+              send_threshold = decline
+            }
+          }
+        }
+      }
+  
+      # Conversión de cortesanos
+      else_if = {
+        limit = { scope:mod_convert_courtiers = yes }
+        every_courtier = {
+          if = {
+            limit = {
+              root = {
+                is_character_interaction_potentially_accepted = {
+                  recipient = prev
+                  interaction = ask_for_conversion_courtier_interaction
+                }
+              }
+            }
+            run_interaction = {
+              interaction = ask_for_conversion_courtier_interaction
+              actor = root
+              recipient = this
+              send_threshold = decline
+            }
+          }
+        }
+      }
+  
+      # Conversión de miembros de la casa
+      else_if = {
+        limit = { scope:mod_convert_house = yes }
+        if = {
+          limit = { exists = house }
+          house = {
+            every_house_member = {
+              if = {
+                limit = {
+                  root = {
+                    is_character_interaction_potentially_accepted = {
+                      recipient = prev
+                      interaction = demand_conversion_interaction
+                    }
+                  }
+                }
+                run_interaction = {
+                  interaction = demand_conversion_interaction
+                  actor = root
+                  recipient = this
+                  send_threshold = decline
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    
+    # Desactiva IA
+    ai_will_do = { base = 0 }
+    ai_check_interval = 0
+  }
+  

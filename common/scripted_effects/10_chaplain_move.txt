@@ -1,0 +1,66 @@
+﻿chaplain_move = {
+    scope:councillor_liege = {
+        # Convertir la capital
+        if = {
+            limit = {
+                NOT = { capital_province.faith = scope:councillor_liege.faith }
+                capital_county = { potential_county_faith_conversion = yes }
+            }
+            scope:councillor = {
+                set_council_task = {
+                    task_type = task_conversion
+                    target = prev.capital_province
+                }
+                save_temporary_scope_value_as = { name = councillor_on_work value = yes }
+            }
+        }
+
+        # Convertir provincias directamente controladas
+        random_directly_owned_province = {
+            limit = {
+                NOT = { exists = scope:councillor_on_work }
+                NOT = { faith = scope:councillor_liege.faith }
+                county = { potential_county_faith_conversion = yes }
+            }
+            scope:councillor = {
+                set_council_task = {
+                    task_type = task_conversion
+                    target = prev
+                }
+                save_temporary_scope_value_as = { name = councillor_on_work value = yes }
+            }
+        }
+
+        # Convertir capitales de vasallos directos
+        random_vassal = {
+            limit = {
+                NOT = { exists = scope:councillor_on_work }
+                exists = capital_province
+                capital_county = { potential_county_faith_conversion = yes }
+            }
+            scope:councillor = {
+                set_council_task = {
+                    task_type = task_conversion
+                    target = prev.capital_province
+                }
+                save_temporary_scope_value_as = { name = councillor_on_work value = yes }
+            }
+        }
+
+        # Convertir condados dentro del sub-reino
+        random_sub_realm_county = {
+            limit = {
+                NOT = { exists = scope:councillor_on_work }
+                NOT = { faith = scope:councillor_liege.faith }
+                county = { potential_county_faith_conversion = yes }
+            }
+            scope:councillor = {
+                set_council_task = {
+                    task_type = task_conversion
+                    target = prev.title_capital_county.title_province
+                }
+                save_temporary_scope_value_as = { name = councillor_on_work value = yes }
+            }
+        }
+    }
+}

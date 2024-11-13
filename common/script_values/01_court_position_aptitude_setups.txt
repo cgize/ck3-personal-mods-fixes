@@ -1,0 +1,677 @@
+﻿## MARTIALS APTITUDES
+court_position_aptitude_martial_base_80pt = {
+		value = 0
+		add = skill_martial_score_value_40pt
+		add = education_martial_value_30pt
+		add = personality_martial_value_10pt
+
+		add = general_physique_value
+		add = health_penalty_values_high
+
+		add = court_trait_warlike_value_20pt
+		add = occupation_busy_score_value_20pt
+		add = court_position_aptitude_family_business_value
+}
+court_position_aptitude_martial_knight_80pt = {
+		value = 0
+		add = skill_martial_score_value_20pt
+		add = skill_prowess_score_value_10pt
+		add = education_martial_value_20pt
+		add = personality_martial_value_15pt
+		
+		add = general_physique_value
+		add = health_penalty_values_high
+	
+		add = bad_traits_for_physical
+		
+		add = court_trait_warlike_value_20pt
+		add = occupation_busy_score_value_20pt
+		add = court_position_aptitude_family_business_value
+}
+court_position_aptitude_lordsheriff_base = {
+		value = 0
+		add = skill_martial_score_value_40pt
+		add = education_martial_value_30pt
+
+		add = personality_martial_value_10pt
+		add = court_trait_warlike_value_20pt
+		
+		add = general_physique_value
+		add = health_penalty_values_high
+
+		add = occupation_busy_score_value_20pt
+		add = court_position_aptitude_family_business_value
+}
+court_position_aptitude_quartermaster_base = {
+		value = 0
+		add = skill_martial_score_value_30pt
+		add = skill_stewardship_score_value_20pt
+		add = education_martial_value_20pt
+		add = personality_martial_value_10pt
+		
+		add = general_physique_value
+		add = health_penalty_values_high
+
+		add = court_trait_warlike_value_20pt
+		add = occupation_busy_score_value_20pt
+		add = court_position_aptitude_family_business_value
+}
+court_position_aptitude_masteratarms_base = {
+		value = 0
+		add = skill_martial_score_value_30pt
+		add = skill_stewardship_score_value_20pt
+		add = education_martial_value_20pt
+		add = personality_martial_value_10pt
+	
+		add = general_physique_value
+		add = health_penalty_values_high
+
+		add = court_trait_warlike_value_20pt
+		add = occupation_busy_score_value_20pt
+		add = court_position_aptitude_family_business_value
+}
+court_position_aptitude_fleetcommander_base = {
+		value = 0
+		add = skill_martial_score_value_30pt
+		add = skill_stewardship_score_value_20pt
+		add = education_martial_value_20pt
+		add = personality_martial_value_10pt
+		
+		add = general_physique_value
+		add = health_penalty_values_high
+
+		add = court_trait_warlike_value_20pt
+		add = occupation_busy_score_value_20pt
+		add = court_position_aptitude_family_business_value
+}
+court_position_aptitude_strategistmaster_base = {
+		value = 0
+		add = skill_martial_score_value_30pt
+		add = skill_stewardship_score_value_20pt
+		add = education_martial_value_20pt
+		add = personality_martial_value_10pt
+	
+		add = general_physique_value
+		add = health_penalty_values_high
+
+		add = court_trait_warlike_value_20pt
+		add = occupation_busy_score_value_20pt
+		add = court_position_aptitude_family_business_value
+}
+court_position_aptitude_marshalassistant_base = {
+		value = 0
+		add = skill_martial_score_value_30pt
+		add = skill_stewardship_score_value_20pt
+		add = education_martial_value_20pt
+		add = personality_martial_value_10pt
+		
+		add = general_physique_value
+		add = health_penalty_values_high
+
+		add = court_trait_warlike_value_20pt
+		add = occupation_busy_score_value_20pt
+		add = court_position_aptitude_family_business_value
+}
+court_position_aptitude_royalengineer_base = {
+		value = 0
+		add = skill_martial_score_value_30pt
+		add = skill_stewardship_score_value_20pt
+		add = education_martial_value_20pt
+		add = personality_martial_value_10pt
+		
+		add = general_physique_value
+		add = health_penalty_values_high
+
+		add = court_trait_warlike_value_20pt
+		add = occupation_busy_score_value_20pt
+		add = court_position_aptitude_family_business_value
+}
+court_position_aptitude_atilliatormaster_base = {
+		value = 0
+		add = skill_martial_score_value_30pt
+		add = skill_prowess_score_value_30pt
+		add = education_martial_value_20pt
+		add = personality_martial_value_10pt
+		
+		add = general_physique_value
+		add = health_penalty_values_high
+
+		add = court_trait_warlike_value_20pt
+		add = occupation_busy_score_value_20pt
+		add = court_position_aptitude_family_business_value
+}
+court_position_aptitude_royalguardscaptain_base = {
+		value = 0
+		add = skill_martial_score_value_30pt
+		add = skill_stewardship_score_value_20pt
+		add = education_martial_value_20pt
+		add = personality_martial_value_10pt
+		
+		add = general_physique_value
+		add = health_penalty_values_high
+
+		add = court_trait_warlike_value_20pt
+		add = occupation_busy_score_value_20pt
+		add = court_position_aptitude_family_business_value
+}
+court_position_aptitude_warconstable_base = {
+		value = 0
+		add = skill_martial_score_value_30pt
+		add = skill_stewardship_score_value_20pt
+		add = education_martial_value_20pt
+		add = personality_martial_value_10pt
+		
+		add = general_physique_value
+		add = health_penalty_values_high
+
+		add = court_trait_warlike_value_20pt
+		add = occupation_busy_score_value_20pt
+		add = court_position_aptitude_family_business_value
+}
+court_position_aptitude_mercenarycataloguer_base = {
+		value = 0
+		add = skill_martial_score_value_30pt
+		add = skill_stewardship_score_value_20pt
+		add = education_martial_value_20pt
+		add = personality_martial_value_10pt
+		
+		add = general_physique_value
+		add = health_penalty_values_high
+
+		add = court_trait_warlike_value_20pt
+		add = occupation_busy_score_value_20pt
+		add = court_position_aptitude_family_business_value
+}
+
+## DIPLOMACY APTITUDES
+court_position_aptitude_diplomacy_base_80pt = {
+		value = 0
+		add = skill_diplomacy_score_value_40pt
+		add = education_diplomacy_value_30pt
+		add = personality_diplomacy_value_10pt
+
+		add = personality_trusting_value_10pt
+		
+		add = general_intellect_value
+		add = general_beauty_value
+		add = health_penalty_values_high
+
+		add = personality_arrogant_value_-5pt
+		add = bad_traits_for_communication
+		
+		add = court_trait_diplomatic_value_20pt
+		add = occupation_busy_score_value_20pt
+		add = court_position_aptitude_family_business_value
+}
+court_position_aptitude_courtemissary_base = {
+		value = 0
+		add = skill_diplomacy_score_value_40pt
+		add = education_diplomacy_value_30pt
+		add = personality_diplomacy_value_10pt
+
+		add = personality_trusting_value_10pt
+		
+		add = general_intellect_value
+		add = general_beauty_value
+		add = health_penalty_values_high
+
+		add = personality_arrogant_value_-5pt
+		add = bad_traits_for_communication
+		
+		add = court_trait_diplomatic_value_20pt
+		add = occupation_busy_score_value_20pt
+		add = court_position_aptitude_family_business_value
+}
+court_position_aptitude_foreignaffairs_base = {
+		value = 0
+		add = skill_diplomacy_score_value_40pt
+		add = education_diplomacy_value_30pt
+		add = personality_diplomacy_value_10pt
+
+		add = personality_trusting_value_10pt
+		
+		add = general_intellect_value
+		add = general_beauty_value
+		add = health_penalty_values_high
+
+		add = personality_arrogant_value_-5pt
+		add = bad_traits_for_communication
+		
+		add = court_trait_diplomatic_value_20pt
+		add = occupation_busy_score_value_20pt
+		add = court_position_aptitude_family_business_value
+}
+court_position_aptitude_pursuivantofarms_base = {
+		value = 0
+		add = skill_diplomacy_score_value_40pt
+		add = education_diplomacy_value_30pt
+		add = personality_diplomacy_value_10pt
+
+		add = personality_trusting_value_10pt
+		
+		add = general_intellect_value
+		add = general_beauty_value
+		add = health_penalty_values_high
+
+		add = personality_arrogant_value_-5pt
+		add = bad_traits_for_communication
+		
+		add = court_trait_diplomatic_value_20pt
+		add = occupation_busy_score_value_20pt
+		add = court_position_aptitude_family_business_value
+}
+court_position_aptitude_heraldambassador_base = {
+		value = 0
+		add = skill_diplomacy_score_value_40pt
+		add = education_diplomacy_value_30pt
+		add = personality_diplomacy_value_10pt
+
+		add = personality_trusting_value_10pt
+		
+		add = general_intellect_value
+		add = general_beauty_value
+		add = health_penalty_values_high
+
+		add = personality_arrogant_value_-5pt
+		add = bad_traits_for_communication
+		
+		add = court_trait_diplomatic_value_20pt
+		add = occupation_busy_score_value_20pt
+		add = court_position_aptitude_family_business_value
+}
+court_position_aptitude_courtcartographer_base = {
+		value = 0
+		add = skill_diplomacy_score_value_40pt
+		add = education_diplomacy_value_30pt
+		add = personality_diplomacy_value_10pt
+
+		add = personality_trusting_value_10pt
+		
+		add = general_intellect_value
+		add = general_beauty_value
+		add = health_penalty_values_high
+
+		add = personality_arrogant_value_-5pt
+		add = bad_traits_for_communication
+		
+		add = court_trait_diplomatic_value_20pt
+		add = occupation_busy_score_value_20pt
+		add = court_position_aptitude_family_business_value
+}
+
+## STEWARDSHIP APTITUDES
+court_position_aptitude_stewardship_base_80pt = {
+		value = 0
+		add = skill_stewardship_score_value_40pt
+		add = education_stewardship_value_30pt
+		add = personality_stewardship_value_10pt
+
+		add = personality_trusting_value_10pt
+
+		add = bad_traits_for_negotiation
+		add = general_intellect_value
+		add = health_penalty_values_high
+
+		add = court_trait_administrative_value_20pt
+		add = occupation_busy_score_value_20pt
+		add = court_position_aptitude_family_business_value
+}
+court_position_aptitude_stewardship_builder_80pt = {
+		value = 0
+		add = skill_stewardship_score_value_30pt
+		add = education_stewardship_value_40pt
+		add = personality_stewardship_value_15pt
+
+		add = personality_ambitious_value_15pt
+
+		add = general_intellect_value
+		add = health_penalty_values_high
+
+		add = court_trait_administrative_value_20pt
+		add = occupation_busy_score_value_20pt
+		add = court_position_aptitude_family_business_value
+}
+court_position_aptitude_stewardconstable_base = {
+		value = 0
+		add = skill_stewardship_score_value_40pt
+		add = education_stewardship_value_30pt
+		add = personality_stewardship_value_10pt
+
+		add = personality_trusting_value_10pt
+		
+		add = bad_traits_for_negotiation
+		add = general_intellect_value
+		add = health_penalty_values_high
+
+		add = court_trait_administrative_value_20pt
+		add = occupation_busy_score_value_20pt
+		add = court_position_aptitude_family_business_value
+}
+court_position_aptitude_mastermerchant_base = {
+		value = 0
+		add = skill_stewardship_score_value_40pt
+		add = education_stewardship_value_30pt
+		add = personality_stewardship_value_10pt
+
+		add = personality_trusting_value_10pt
+		
+		add = bad_traits_for_negotiation
+		add = general_intellect_value
+		add = health_penalty_values_high
+
+		add = court_trait_administrative_value_20pt
+		add = occupation_busy_score_value_20pt
+		add = court_position_aptitude_family_business_value
+}
+court_position_aptitude_courtbailiff_base = {
+		value = 0
+		add = skill_stewardship_score_value_40pt
+		add = education_stewardship_value_30pt
+		add = personality_stewardship_value_10pt
+
+		add = personality_trusting_value_10pt
+		
+		add = bad_traits_for_negotiation
+		add = general_intellect_value
+		add = health_penalty_values_high
+
+		add = court_trait_administrative_value_20pt
+		add = occupation_busy_score_value_20pt
+		add = court_position_aptitude_family_business_value
+}
+court_position_aptitude_stonemasonmaster_base = {
+		value = 0
+		add = skill_stewardship_score_value_40pt
+		add = education_stewardship_value_30pt
+		add = personality_stewardship_value_10pt
+
+		add = personality_trusting_value_10pt
+		
+		add = bad_traits_for_negotiation
+		add = general_intellect_value
+		add = health_penalty_values_high
+
+		add = court_trait_administrative_value_20pt
+		add = occupation_busy_score_value_20pt
+		add = court_position_aptitude_family_business_value
+}
+court_position_aptitude_seneschal_base = {
+		value = 0
+		add = skill_stewardship_score_value_40pt
+		add = education_stewardship_value_30pt
+		add = personality_stewardship_value_10pt
+
+		add = personality_trusting_value_10pt
+		
+		add = bad_traits_for_negotiation
+		add = general_intellect_value
+		add = health_penalty_values_high
+
+		add = court_trait_administrative_value_20pt
+		add = occupation_busy_score_value_20pt
+		add = court_position_aptitude_family_business_value
+}
+court_position_aptitude_courtmathematician_base = {
+		value = 0
+		add = skill_stewardship_score_value_40pt
+		add = education_stewardship_value_30pt
+		add = personality_stewardship_value_10pt
+
+		add = personality_trusting_value_10pt
+		
+		add = bad_traits_for_negotiation
+		add = general_intellect_value
+		add = health_penalty_values_high
+
+		add = court_trait_administrative_value_20pt
+		add = occupation_busy_score_value_20pt
+		add = court_position_aptitude_family_business_value
+}
+
+## LEARNING APTITUDES
+court_position_aptitude_learning_base_80pt = {
+		value = 0
+		add = skill_learning_score_value_40pt
+		add = education_learning_value_30pt
+		add = personality_learning_value_10pt
+
+		add = personality_calm_value_10pt
+		
+		add = bad_traits_for_learning
+		add = general_intellect_value
+		add = health_penalty_values_high
+
+		add = court_trait_scholarly_value_20pt
+		add = occupation_busy_score_value_20pt
+		add = court_position_aptitude_family_business_value
+}
+court_position_aptitude_templeassistant_base = {
+		value = 0
+		add = skill_learning_score_value_40pt
+		add = education_learning_value_30pt
+		add = personality_learning_value_10pt
+
+		add = bad_traits_for_learning
+		add = general_intellect_value
+		add = health_penalty_values_high
+
+		add = court_trait_scholarly_value_20pt
+		add = occupation_busy_score_value_20pt
+		add = court_position_aptitude_family_business_value
+}
+court_position_aptitude_courtphilosopher_base = {
+		value = 0
+		add = skill_learning_score_value_40pt
+		add = education_learning_value_30pt
+		add = personality_learning_value_10pt
+		
+		add = bad_traits_for_learning
+		add = general_intellect_value
+		add = health_penalty_values_high
+
+		add = court_trait_scholarly_value_20pt
+		add = occupation_busy_score_value_20pt
+		add = court_position_aptitude_family_business_value
+}
+court_position_aptitude_courtscriber_base = {
+		value = 0
+		add = skill_learning_score_value_40pt
+		add = education_learning_value_30pt
+		add = personality_learning_value_10pt
+		
+		add = bad_traits_for_learning
+		add = general_intellect_value
+		add = health_penalty_values_high
+
+		add = court_trait_scholarly_value_20pt
+		add = occupation_busy_score_value_20pt
+		add = court_position_aptitude_family_business_value
+}
+court_position_aptitude_courtlibrarian_base = {
+		value = 0
+		add = skill_learning_score_value_40pt
+		add = education_learning_value_30pt
+		add = personality_learning_value_10pt
+		
+		add = bad_traits_for_learning
+		add = general_intellect_value
+		add = health_penalty_values_high
+
+		add = court_trait_scholarly_value_20pt
+		add = occupation_busy_score_value_20pt
+		add = court_position_aptitude_family_business_value
+}
+court_position_aptitude_courtapothecary_base = {
+		value = 0
+		add = skill_learning_score_value_40pt
+		add = education_learning_value_30pt
+		add = personality_learning_value_10pt
+		
+		add = bad_traits_for_learning
+		add = general_intellect_value
+		add = health_penalty_values_high
+
+		add = court_trait_scholarly_value_20pt
+		add = occupation_busy_score_value_20pt
+		add = court_position_aptitude_family_business_value
+}
+court_position_aptitude_courttutor_base = {
+		value = 0
+		add = skill_learning_score_value_40pt
+		add = education_learning_value_30pt
+		add = personality_learning_value_10pt
+		
+		add = bad_traits_for_learning
+		add = general_intellect_value
+		add = health_penalty_values_high
+
+		add = court_trait_scholarly_value_20pt
+		add = occupation_busy_score_value_20pt
+		add = court_position_aptitude_family_business_value
+}
+court_position_aptitude_antiquarian_base = {
+		value = 0
+		add = skill_learning_score_value_40pt
+		add = education_learning_value_30pt
+		add = personality_learning_value_10pt
+		
+		add = bad_traits_for_learning
+		add = general_intellect_value
+		add = health_penalty_values_high
+
+		add = court_trait_scholarly_value_20pt
+		add = occupation_busy_score_value_20pt
+		add = court_position_aptitude_family_business_value
+}
+court_position_aptitude_literaturemagister_base = {
+		value = 0
+		add = skill_learning_score_value_40pt
+		add = education_learning_value_30pt
+		add = personality_learning_value_10pt
+
+		add = bad_traits_for_learning
+		add = general_intellect_value
+		add = health_penalty_values_high
+
+		add = court_trait_scholarly_value_20pt
+		add = occupation_busy_score_value_20pt
+		add = court_position_aptitude_family_business_value
+}
+
+## INTRIGUE APTITUDES
+court_position_aptitude_intrigue_base_80pt = {
+		value = 0
+		add = skill_intrigue_score_value_40pt
+		add = education_intrigue_value_30pt
+		add = personality_intrigue_value_10pt
+
+		add = general_intellect_value
+		add = health_penalty_values_high
+
+		add = court_trait_intrigue_value_20pt
+		add = occupation_busy_score_value_20pt
+		add = court_position_aptitude_family_business_value
+}
+court_position_aptitude_spymasterassistant_base = {
+		value = 0
+		add = skill_intrigue_score_value_40pt
+		add = education_intrigue_value_30pt
+		add = personality_intrigue_value_10pt
+
+		add = general_intellect_value
+		add = health_penalty_values_high
+
+		add = court_trait_intrigue_value_20pt
+		add = occupation_busy_score_value_20pt
+		add = court_position_aptitude_family_business_value
+}
+court_position_aptitude_grandwinemaker_base = {
+		value = 0
+		add = skill_intrigue_score_value_40pt
+		add = education_intrigue_value_30pt
+		add = personality_intrigue_value_10pt
+
+		add = general_intellect_value
+		add = health_penalty_values_high
+
+		add = court_trait_intrigue_value_20pt
+		add = occupation_busy_score_value_20pt
+		add = court_position_aptitude_family_business_value
+}
+court_position_aptitude_royalscourge_base = {
+		value = 0
+		add = skill_intrigue_score_value_40pt
+		add = education_intrigue_value_30pt
+		add = personality_intrigue_value_10pt
+
+		add = general_intellect_value
+		add = health_penalty_values_high
+
+		add = court_trait_intrigue_value_20pt
+		add = occupation_busy_score_value_20pt
+		add = court_position_aptitude_family_business_value
+}
+court_position_aptitude_barristerofficial_base = {
+		value = 0
+		add = skill_intrigue_score_value_40pt
+		add = education_intrigue_value_30pt
+		add = personality_intrigue_value_10pt
+
+		add = general_intellect_value
+		add = health_penalty_values_high
+
+		add = court_trait_intrigue_value_20pt
+		add = occupation_busy_score_value_20pt
+		add = court_position_aptitude_family_business_value
+}
+
+## PROWESS APTITUDES
+court_position_aptitude_masterblacksmith_base = {
+		value = 0
+		add = skill_prowess_score_value_50pt
+		add = skill_martial_score_value_20pt
+		add = skill_stewardship_score_value_20pt
+		add = education_martial_value_10pt
+		add = personality_prowess_value_5pt
+				
+		add = court_position_aptitude_family_business_value
+		add = court_position_aptitude_high_penalty_value
+}
+court_position_aptitude_stablemaster_base = {
+		value = 0
+		add = skill_prowess_score_value_50pt
+		add = skill_martial_score_value_20pt
+		add = skill_stewardship_score_value_20pt
+		add = education_martial_value_10pt
+		add = personality_prowess_value_5pt
+				
+		add = court_position_aptitude_family_business_value
+		add = court_position_aptitude_high_penalty_value
+}
+court_position_aptitude_bodyguard_base = {
+		value = 0
+		add = skill_prowess_score_value_50pt
+		add = skill_martial_score_value_20pt
+		add = skill_stewardship_score_value_20pt
+		add = education_martial_value_10pt
+		add = personality_prowess_value_5pt
+				
+		add = court_position_aptitude_family_business_value
+		add = court_position_aptitude_high_penalty_value
+}
+
+## COMMANDER APTITUDES
+court_position_aptitude_commander_base_80pt = {
+		value = 0
+		add = skill_prowess_score_value_40pt
+		add = skill_martial_score_value_20pt
+		add = education_martial_value_20pt
+		add = personality_prowess_value_15pt
+
+		add = bad_traits_for_physical
+		add = general_physique_value
+		
+		add = court_position_aptitude_family_business_value
+		add = court_position_aptitude_high_penalty_value
+}
+

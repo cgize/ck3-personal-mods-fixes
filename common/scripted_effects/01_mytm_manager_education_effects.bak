@@ -1,0 +1,142 @@
+﻿### 开启自动教育 ###
+mytm_auto_education_flags_on_effect = {
+	mytm_education_flags_select_all_ward_effect = yes
+	every_in_list = {
+		list = ward_list
+		mytm_educate_flags_all_child_interaction_auto_effect = yes
+	}
+}
+### 选择被监护人 ###
+mytm_education_flags_select_all_ward_effect = {
+	every_courtier = {
+		limit = {
+			is_adult = no
+			age >= 6
+			num_of_relation_guardian = 0
+			is_imprisoned = no
+			NOT = { has_trait = incapable }
+			#trigger_if = {
+			#	limit = { scope:guardian_liege = { is_landless_adventurer = no } }
+			#	is_travelling = no #The child in question should not already have a travel plan
+			#}
+			#NOT = { exists = var:ward_travelling_to_guardian }
+			#NOT = { exists = var:hostage_travelling_to_warden }
+			#NOT = { exists = var:ward_waiting_for_guardian }
+			#trigger_if = { #If a hostage then only if scope:guardian_liege is the hostage taker
+			#	limit = { is_hostage = yes }
+			#	is_hostage_of = scope:guardian_liege
+			#}
+		}
+		add_to_temporary_list = ward_list
+	}
+}
+### 选择监护人 ###
+mytm_education_flags_select_guardian_effect = {
+	scope:guardian_liege = {
+		ordered_courtier = {
+			limit = {
+				is_ai = yes
+				is_physically_able_adult = yes
+			}
+			order_by = mytm_educator_skill_value
+			position = 0
+			#max = 1
+			save_scope_as = guardian
+		}
+	}
+	#自己
+	#if = {
+	#	limit = { is_adult = yes is_imprisoned = no }
+	#	root = { save_scope_as = guardian }
+	#}
+	#教师
+	#else_if = {
+	#	limit = { exists = root.court_position:court_tutor_court_position }
+	#	random_court_position_holder = {
+	#		type = court_tutor_court_position
+	#		save_scope_as = guardian
+	#	}
+	#}
+	#私人医生
+	#else_if = {
+	#	limit = { exists = root.court_position:court_physician_court_position }
+	#	random_court_position_holder = {
+	#		type = court_physician_court_position
+	#		save_scope_as = guardian
+	#	}
+	#}
+	#领地祭司
+	#else_if = {
+	#	limit = { exists = root.cp:councillor_court_chaplain }
+	#	root.cp:councillor_court_chaplain = { save_scope_as = guardian }
+	#}
+}
+#转变文化
+mytm_education_flags_convert_culture_effect = {
+	scope:ward = {
+		if = {
+			limit = { NOT = { scope:ward.culture = scope:guardian_liege.culture } }
+			set_culture = scope:guardian_liege.culture
+		}
+	}
+}
+#转变信仰
+mytm_education_flags_convert_faith_effect = {
+	scope:ward = {
+		if = {
+			limit = { NOT = { scope:ward.faith = scope:guardian_liege.faith } }
+			set_character_faith = scope:guardian_liege.faith
+		}
+  }
+}
+#送去大学
+mytm_education_flags_send_to_university_effect = {
+	scope:ward = {
+		#scope:guardian_liege = { remove_short_term_gold = monumental_gold_value }
+  	custom_tooltip = is_sent_to_university
+  	add_character_flag = {
+  		flag = studying_at_university
+  		years = 17
+  	}
+	}
+}
+### 自动教育监护人 ###
+mytm_educate_flags_all_child_interaction_auto_effect = {
+		save_scope_as = ward
+		mytm_education_flags_select_guardian_effect = yes
+		if = {
+			limit = { exists = scope:guardian }
+			scope:guardian_liege = {
+  			send_interface_message = {
+  				#type = event_childhood_neutral
+  				type = event_childhood_good
+  				title = educate_child_interaction_notification
+  				left_icon = scope:guardian
+  				right_icon = scope:ward
+  				if = {
+  					limit = { NOT = { has_variable = mytm_var_auto_education_convert_culture_off } }
+  					mytm_education_flags_convert_culture_effect = yes
+  				}
+  				if = {
+  					limit = { NOT = { has_variable = mytm_var_auto_education_convert_faith_off } }
+  					mytm_education_flags_convert_faith_effect = yes
+  				}
+  				mytm_education_flags_send_to_university_effect = yes
+  				mytm_ward_depart_auto_effect = yes
+  			}
+  		}
+		}
+}
+### 确定监护关系 ###
+mytm_ward_depart_auto_effect = {
+	scope:ward = { set_relation_guardian = scope:guardian }
+	#if = {
+	#	limit = { NOT = { scope:guardian = scope:guardian.liege } }
+		#Opinions
+  	guardian_add_opinion_effect = {
+  		GUARDIAN = scope:guardian
+  		WARD_LIEGE = scope:ward_liege
+  		WARD = scope:ward
+  	}
+	#}
+}

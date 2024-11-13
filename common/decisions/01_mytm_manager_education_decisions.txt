@@ -1,0 +1,120 @@
+﻿mytm_manager_education_decisions = {
+	# Cambiar la categoría de la decisión a admin
+	decision_group_type = admin
+
+	# Imagen asociada a la decisión
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_misc.dds"
+	}
+
+	# Descripción dinámica dependiendo de las variables activadas/desactivadas
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					has_variable = mytm_var_auto_education_on
+				}
+				desc = mytm_var_auto_education_on_tooltip
+			}
+			desc = mytm_var_auto_education_off_tooltip
+		}
+		desc = mytm_manager_education_decisions_desc
+	}
+
+	# Criterios para que se muestre la decisión
+	is_shown = {
+		is_ai = no # Solo jugadores, no la IA
+	}
+
+	# Opciones visuales en el widget de la decisión
+	widget = {
+		gui = "decision_view_widget_option_list_generic"
+		controller = decision_option_list_controller
+		decision_to_second_step_button = "mytm_manager_education_decisions_second_step_button"
+		show_from_start = yes
+
+		# Opciones individuales
+		item = {
+			value = mytm_flag_auto_education_on
+			icon = "gfx/interface/icons/message_feed/language.dds"
+			localization = mytm_flag_auto_education_on
+		}
+		item = {
+			value = mytm_flag_auto_education_convert_culture_off
+			icon = "gfx/interface/icons/message_feed/culture.dds"
+			localization = mytm_flag_auto_education_convert_culture_off
+		}
+		item = {
+			value = mytm_flag_auto_education_convert_faith_off
+			icon = "gfx/interface/icons/message_feed/religious.dds"
+			localization = mytm_flag_auto_education_convert_faith_off
+		}
+		item = {
+			value = mytm_flag_immediate_education_on
+			icon = "gfx/interface/icons/message_feed/child.dds"
+			localization = mytm_flag_immediate_education_on
+		}
+	}
+
+	# Efectos al seleccionar una opción en la decisión
+	effect = {
+		# Activar/desactivar educación automática
+		if = {
+			limit = { scope:mytm_flag_auto_education_on = yes }
+			if = {
+				limit = { NOT = { any_owned_story = { story_type = mytm_auto_education_story } } }
+				create_story = mytm_auto_education_story
+				custom_tooltip = mytm_var_auto_education_on
+				custom_tooltip = mytm_auto_education_send_to_university_tooltip
+			}
+			else = {
+				random_owned_story = {
+					limit = { story_type = mytm_auto_education_story }
+					end_story = yes
+				}
+				custom_tooltip = mytm_var_auto_education_off
+			}
+		}
+
+		# Activar/desactivar conversión de cultura automática
+		else_if = {
+			limit = { scope:mytm_flag_auto_education_convert_culture_off = yes }
+			if = {
+				limit = { has_variable = mytm_var_auto_education_convert_culture_off }
+				remove_variable = mytm_var_auto_education_convert_culture_off
+				custom_tooltip = mytm_var_auto_education_convert_culture_on
+			}
+			else = {
+				set_variable = mytm_var_auto_education_convert_culture_off
+				custom_tooltip = mytm_var_auto_education_convert_culture_off
+			}
+		}
+
+		# Activar/desactivar conversión de fe automática
+		else_if = {
+			limit = { scope:mytm_flag_auto_education_convert_faith_off = yes }
+			if = {
+				limit = { has_variable = mytm_var_auto_education_convert_faith_off }
+				remove_variable = mytm_var_auto_education_convert_faith_off
+				custom_tooltip = mytm_var_auto_education_convert_faith_on
+			}
+			else = {
+				set_variable = mytm_var_auto_education_convert_faith_off
+				custom_tooltip = mytm_var_auto_education_convert_faith_off
+			}
+		}
+
+		# Educación inmediata
+		else_if = {
+			limit = { scope:mytm_flag_immediate_education_on = yes }
+			save_scope_as = guardian_liege
+			save_scope_as = ward_liege
+			mytm_auto_education_flags_on_effect = yes
+		}
+	}
+
+	# La IA nunca ejecutará esta decisión
+	ai_check_interval = 0
+	ai_potential = { always = no }
+	ai_will_do = { base = 0 }
+}

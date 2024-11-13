@@ -1,0 +1,121 @@
+﻿reinforce_court_security = {
+	court_position_types = { 
+		marshal_assistant_position
+	}
+
+	# Monthly cost for the task
+	cost = {
+		round = no
+		gold = {
+			add = {
+				value = monthly_court_position_task_cost
+				desc = COURT_POSITION_TASK_COST_BREAKDOWN_BASE
+				format = "BASE_VALUE_FORMAT_DECIMALS_PLUS_NEGATIVE"
+			}
+		}
+	}
+
+	employee_modifier = {
+		monthly_prestige = minor_court_position_task_prestige_salary
+	}
+
+	scaling_employer_modifiers = {
+		terrible = { 	court_grandeur_baseline_add = 1.5		}
+		poor = {	 	court_grandeur_baseline_add = 3.0		}
+		average = {	 	court_grandeur_baseline_add = 4.5		}
+		good = {	 	court_grandeur_baseline_add = 6.0		}
+		excellent = { 	court_grandeur_baseline_add = 7.5		}
+	}
+
+	is_shown = {  }
+	is_valid_showing_failures_only = { }
+	on_start = { }
+	on_end = { }
+
+	ai_will_do = {
+		value = 30
+	}
+
+}
+
+levies_commitment_motivation = {
+	court_position_types = { 
+		marshal_assistant_position
+	}
+
+	# Monthly cost for the task
+	cost = {
+		round = no
+		gold = {
+			add = {
+				value = monthly_court_position_task_cost
+				desc = COURT_POSITION_TASK_COST_BREAKDOWN_BASE
+				format = "BASE_VALUE_FORMAT_DECIMALS_PLUS_NEGATIVE"
+			}
+		}
+	}
+
+	employee_modifier = {
+		monthly_prestige = minor_court_position_task_prestige_salary
+	}
+
+	scaling_employer_modifiers = {
+		terrible = { 	levy_size = 0.075	}
+		poor = {	 	levy_size = 0.15	}
+		average = {	 	levy_size = 0.225	}
+		good = {	 	levy_size = 0.3		}
+		excellent = { 	levy_size = 0.375	}
+	}
+
+	is_shown = {  }
+	is_valid_showing_failures_only = { }
+	on_start = { }
+	on_end = { }
+
+	ai_will_do = {
+		value = 30
+	}
+
+}
+
+assist_the_sheriff = {
+	court_position_types = { 
+		marshal_assistant_position
+	}
+
+	# Monthly cost for the task
+	cost = {
+		round = no
+		gold = {
+			add = {
+				value = monthly_court_position_task_cost
+				desc = COURT_POSITION_TASK_COST_BREAKDOWN_BASE
+				format = "BASE_VALUE_FORMAT_DECIMALS_PLUS_NEGATIVE"
+			}
+		}
+	}
+
+	employee_modifier = {
+		monthly_prestige = minor_court_position_task_prestige_salary
+	}
+
+	scaling_employer_modifiers = {
+		terrible = { 	monthly_county_control_growth_factor = 0.015	}
+		poor = {	 	monthly_county_control_growth_factor = 0.0225	}
+		average = {	 	monthly_county_control_growth_factor = 0.03	}
+		good = {	 	monthly_county_control_growth_factor = 0.0375	}
+		excellent = { 	monthly_county_control_growth_factor = 0.045	}
+	}
+
+	is_shown = {
+		employs_court_position = lord_sheriff_position
+	}
+	is_valid_showing_failures_only = { }
+	on_start = { }
+	on_end = { }
+
+	ai_will_do = {
+		value = 30
+	}
+
+}

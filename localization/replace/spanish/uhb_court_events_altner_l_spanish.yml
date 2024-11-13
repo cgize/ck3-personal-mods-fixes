@@ -1,0 +1,7 @@
+﻿l_spanish:
+  uhb_court_maintenance.0001.t:0 "Marca de Distinción"
+  uhb_court_maintenance.0001.desc:0 "A medida que crece la renombre de mi dinastía, la familiaridad con el glorioso emblema de [ROOT.Char.GetHouse.GetName] también se extiende. \n\n"
+  uhb_court_maintenance.0001.desc_illustrious:0 "El emblema de mi familia ahora es conocido en todo el mundo, reconocido por cancilleres, enseñado a niños y admirado por comerciantes en tierras donde los [ROOT.Char.GetCulture.GetCollectiveNounNoTooltip] nunca han puesto pie."
+  uhb_court_maintenance.0001.desc_masterwork:0 "El emblema de mi familia ahora es de conocimiento común, contado entre las grandes familias reales de la región y la más alta nobleza de los [ROOT.Char.GetCulture.GetCollectiveNounNoTooltip]."
+  uhb_court_maintenance.0001.desc_famed:0 "El emblema de mi familia ahora es reconocido en los círculos regionales de la nobleza, altamente estimado entre las destacadas líneas de sangre de los [ROOT.Char.GetCulture.GetNameNoTooltip]."
+  uhb_court_maintenance.0001.a:0 "Como debe ser."
