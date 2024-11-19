@@ -1,43 +1,69 @@
-﻿mytm_manager_education_decisions = {
-	# Cambiar la categoría de la decisión a admin
+﻿	#Cambio: categoria admin
+mytm_manager_education_decisions = {
 	decision_group_type = admin
-
-	# Imagen asociada a la decisión
 	picture = {
-		reference = "gfx/interface/illustrations/decisions/decision_misc.dds"
+		reference = "gfx/interface/illustrations/decisions/decision_golden_age.dds"
 	}
-
-	# Descripción dinámica dependiendo de las variables activadas/desactivadas
+	#desc = mytm_manager_education_decisions_desc
 	desc = {
-		first_valid = {
-			triggered_desc = {
-				trigger = {
-					has_variable = mytm_var_auto_education_on
-				}
-				desc = mytm_var_auto_education_on_tooltip
-			}
-			desc = mytm_var_auto_education_off_tooltip
+  	triggered_desc = {
+  		trigger = { has_variable = mytm_var_auto_education_on }
+			desc = mytm_var_auto_education_on_tooltip
 		}
-		desc = mytm_manager_education_decisions_desc
+  	## 转变信仰文化 ##
+  	triggered_desc = {
+  		trigger = { has_variable = mytm_var_auto_education_convert_culture_off }
+			desc = mytm_var_auto_education_convert_culture_off_tooltip
+		}
+		triggered_desc = {
+  		trigger = { has_variable = mytm_var_auto_education_convert_faith_off }
+			desc = mytm_var_auto_education_convert_faith_off_tooltip
+		}
+  	## 教育重心 ##
+  	triggered_desc = {
+  		trigger = { has_variable = mytm_var_auto_set_focus_education_diplomacy }
+			desc = mytm_var_auto_set_focus_education_diplomacy
+		}
+		triggered_desc = {
+  		trigger = { has_variable = mytm_var_auto_set_focus_education_martial }
+			desc = mytm_var_auto_set_focus_education_martial
+		}
+		triggered_desc = {
+  		trigger = { has_variable = mytm_var_auto_set_focus_education_stewardship }
+			desc = mytm_var_auto_set_focus_education_stewardship
+		}
+		triggered_desc = {
+  		trigger = { has_variable = mytm_var_auto_set_focus_education_intrigue }
+			desc = mytm_var_auto_set_focus_education_intrigue
+		}
+		triggered_desc = {
+  		trigger = { has_variable = mytm_var_auto_set_focus_education_learning }
+			desc = mytm_var_auto_set_focus_education_learning
+		}
 	}
-
-	# Criterios para que se muestre la decisión
+	#sort_order = 100
 	is_shown = {
-		is_ai = no # Solo jugadores, no la IA
+		is_ai = no
 	}
-
-	# Opciones visuales en el widget de la decisión
 	widget = {
 		gui = "decision_view_widget_option_list_generic"
 		controller = decision_option_list_controller
 		decision_to_second_step_button = "mytm_manager_education_decisions_second_step_button"
 		show_from_start = yes
-
-		# Opciones individuales
 		item = {
 			value = mytm_flag_auto_education_on
 			icon = "gfx/interface/icons/message_feed/language.dds"
 			localization = mytm_flag_auto_education_on
+		}
+		item = {
+			value = mytm_flag_immediate_education_on
+			icon = "gfx/interface/icons/message_feed/child.dds"
+			localization = mytm_flag_immediate_education_on
+		}
+		item = {
+			value = mytm_flag_auto_set_education_focus_on
+			icon = "gfx/interface/icons/message_feed/learning.dds"
+			localization = mytm_flag_auto_set_education_focus_on
 		}
 		item = {
 			value = mytm_flag_auto_education_convert_culture_off
@@ -50,33 +76,84 @@
 			localization = mytm_flag_auto_education_convert_faith_off
 		}
 		item = {
-			value = mytm_flag_immediate_education_on
-			icon = "gfx/interface/icons/message_feed/child.dds"
-			localization = mytm_flag_immediate_education_on
+			value = mytm_flag_dynasty_unlock_tier_5_education_on
+			icon = "gfx/interface/icons/message_feed/dynasty.dds"
+			localization = mytm_flag_dynasty_unlock_tier_5_education_on
+			is_shown = {
+				dynasty = { NOT = { has_dynasty_modifier = mytm_modifier_dynasty_unlock_tier_5_education } }
+			}
+			is_valid = {
+				#trigger_if = {
+				#	limit = { dynasty = { NOT = { has_dynasty_modifier = mytm_modifier_dynasty_unlock_tier_5_education } } }
+					short_term_gold >= 1000
+  				dynasty = { dynasty_prestige >= 1000 }
+				#}
+			}
 		}
 	}
-
-	# Efectos al seleccionar una opción en la decisión
 	effect = {
-		# Activar/desactivar educación automática
+		#开启自动教育
 		if = {
 			limit = { scope:mytm_flag_auto_education_on = yes }
 			if = {
 				limit = { NOT = { any_owned_story = { story_type = mytm_auto_education_story } } }
 				create_story = mytm_auto_education_story
 				custom_tooltip = mytm_var_auto_education_on
+				custom_tooltip = mytm_manager_education_decisions_desc
 				custom_tooltip = mytm_auto_education_send_to_university_tooltip
 			}
 			else = {
 				random_owned_story = {
-					limit = { story_type = mytm_auto_education_story }
-					end_story = yes
-				}
+    			limit = { story_type = mytm_auto_education_story }
+    			end_story = yes
+    		}
 				custom_tooltip = mytm_var_auto_education_off
 			}
 		}
-
-		# Activar/desactivar conversión de cultura automática
+		#立刻教育
+		else_if = {
+			limit = { scope:mytm_flag_immediate_education_on = yes }
+			#trigger_event = { id = mytm_manager_education_events.0001 }
+			save_scope_as = guardian_liege
+  		save_scope_as = ward_liege
+  		mytm_auto_education_flags_on_effect = yes
+		}
+		#设置默认教育重心
+		else_if = {
+			limit = { scope:mytm_flag_auto_set_education_focus_on = yes }
+			custom_tooltip = mytm_event_auto_set_education_focus.desc
+			trigger_event = { id = mytm_manager_education_events.0011 }
+		}
+		#宗族允许五级教育特质
+		else_if = {
+			limit = { scope:mytm_flag_dynasty_unlock_tier_5_education_on = yes }
+			if = {
+				limit = { dynasty = { NOT = { has_dynasty_modifier = mytm_modifier_dynasty_unlock_tier_5_education } } }
+				remove_short_term_gold = 1000
+				#custom_tooltip = mytm_var_dynasty_unlock_tier_5_education_on
+				dynasty = {
+					add_dynasty_prestige = -1000
+					add_dynasty_modifier = { modifier = mytm_modifier_dynasty_unlock_tier_5_education }
+					set_variable = ce1_legitimacy_legacy_5_education_learning_5
+      		set_variable = ce1_legitimacy_legacy_5_education_stewardship_5
+      		set_variable = ce1_legitimacy_legacy_5_education_martial_5
+      		set_variable = ce1_legitimacy_legacy_5_education_intrigue_5
+      		set_variable = ce1_legitimacy_legacy_5_education_diplomacy_5
+				}
+			}
+			else = {
+				#custom_tooltip = mytm_var_dynasty_unlock_tier_5_education_off
+				dynasty = {
+					remove_dynasty_modifier = mytm_modifier_dynasty_unlock_tier_5_education
+					remove_variable = ce1_legitimacy_legacy_5_education_learning_5
+      		remove_variable = ce1_legitimacy_legacy_5_education_stewardship_5
+      		remove_variable = ce1_legitimacy_legacy_5_education_martial_5
+      		remove_variable = ce1_legitimacy_legacy_5_education_intrigue_5
+      		remove_variable = ce1_legitimacy_legacy_5_education_diplomacy_5
+				}
+			}
+		}
+		#转变文化
 		else_if = {
 			limit = { scope:mytm_flag_auto_education_convert_culture_off = yes }
 			if = {
@@ -89,8 +166,7 @@
 				custom_tooltip = mytm_var_auto_education_convert_culture_off
 			}
 		}
-
-		# Activar/desactivar conversión de fe automática
+		#转变信仰
 		else_if = {
 			limit = { scope:mytm_flag_auto_education_convert_faith_off = yes }
 			if = {
@@ -103,17 +179,7 @@
 				custom_tooltip = mytm_var_auto_education_convert_faith_off
 			}
 		}
-
-		# Educación inmediata
-		else_if = {
-			limit = { scope:mytm_flag_immediate_education_on = yes }
-			save_scope_as = guardian_liege
-			save_scope_as = ward_liege
-			mytm_auto_education_flags_on_effect = yes
-		}
 	}
-
-	# La IA nunca ejecutará esta decisión
 	ai_check_interval = 0
 	ai_potential = { always = no }
 	ai_will_do = { base = 0 }

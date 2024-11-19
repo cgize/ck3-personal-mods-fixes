@@ -3,7 +3,7 @@
         reference = "gfx/interface/illustrations/decisions/decision_personal_religious.dds"
     }
     desc = mod_mass_convert_subjects_decision_desc
-    decision_group_type = admin
+    decision_group_type = admin # Modificacion de categoria
     
     # Determinar si la decisión es visible
     is_shown = { 

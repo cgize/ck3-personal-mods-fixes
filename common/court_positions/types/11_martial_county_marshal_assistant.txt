@@ -16,7 +16,10 @@
 	
 	aptitude = court_position_aptitude_marshalassistant_base
 
-	is_shown = 			{		highest_held_title_tier >= tier_barony		} 
+	is_shown = {		
+        highest_held_title_tier >= tier_barony		
+        NOT = { government_has_flag = government_is_landless_adventurer }
+    }
 	valid_position = 	{ 		highest_held_title_tier >= tier_county 		}
 
 	is_shown_character = {	
@@ -103,8 +106,8 @@
 	}
 
 	modifier = {	martial = 1
-					monthly_martial_lifestyle_xp_gain_mult = 0.1
-					monthly_prestige = 0.2
+					monthly_martial_lifestyle_xp_gain_mult = 0.2
+					monthly_prestige = 0.4
 					monthly_dread = 0.0
 					monthly_piety = 0.0	}
 

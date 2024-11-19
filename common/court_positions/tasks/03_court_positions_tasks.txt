@@ -1,0 +1,128 @@
+﻿quarrying_supervision = {
+	court_position_types = { 
+		stonemason_master_position
+	}
+
+	# Monthly cost for the task
+	cost = {
+		round = no
+		gold = {
+			add = {
+				value = 1.0
+				desc = COURT_POSITION_TASK_COST_BREAKDOWN_BASE
+				format = "BASE_VALUE_FORMAT_DECIMALS_PLUS_NEGATIVE"
+			}
+		}
+	}
+
+	employee_modifier = {
+		monthly_prestige = minor_court_position_task_prestige_salary
+	}
+
+	scaling_employer_modifiers = {
+		terrible = { 	build_speed = -0.05	}
+		poor = {	 	build_speed = -0.1	}
+		average = {	 	build_speed = -0.15	}
+		good = {	 	build_speed = -0.2	}
+		excellent = { 	build_speed = -0.25	}
+	}
+
+	is_shown = {  }
+	is_valid_showing_failures_only = { }
+	on_start = { }
+	on_end = { }
+
+	ai_will_do = {
+		value = 30
+	}
+
+}
+
+masonry_repair = {
+	court_position_types = { 
+		stonemason_master_position
+	}
+
+	# Monthly cost for the task
+	cost = {
+		round = no
+		gold = {
+			add = {
+				value = 0.15
+				desc = COURT_POSITION_TASK_COST_BREAKDOWN_BASE
+				format = "BASE_VALUE_FORMAT_DECIMALS_PLUS_NEGATIVE"
+			}
+		}
+	}
+
+	employee_modifier = {
+		monthly_prestige = minor_court_position_task_prestige_salary
+	}
+
+	scaling_employer_modifiers = {
+		terrible = { 	holding_build_speed = -0.05	}
+		poor = {	 	holding_build_speed = -0.1	}
+		average = {	 	holding_build_speed = -0.15	}
+		good = {	 	holding_build_speed = -0.2	}
+		excellent = { 	holding_build_speed = -0.25	}
+	}
+
+	is_shown = {  }
+	is_valid_showing_failures_only = { }
+	on_start = { }
+	on_end = { }
+
+	ai_will_do = {
+		value = 30
+	}
+
+}
+
+bridge_construction = {
+	court_position_types = { 
+		stonemason_master_position
+	}
+
+	# Monthly cost for the task
+	cost = {
+		round = no
+		gold = {
+			add = {
+				value = monthly_court_position_task_cost
+				desc = COURT_POSITION_TASK_COST_BREAKDOWN_BASE
+				format = "BASE_VALUE_FORMAT_DECIMALS_PLUS_NEGATIVE"
+			}
+		}
+	}
+
+	employee_modifier = {
+		monthly_prestige = minor_court_position_task_prestige_salary
+	}
+
+	scaling_employer_modifiers = {
+		terrible = { 
+						development_growth_factor = 0.01 
+		}
+		poor = { 
+						development_growth_factor = 0.02 
+		}
+		average = { 
+						development_growth_factor = 0.03 
+		}
+		good = { 
+						development_growth_factor = 0.05 
+		}
+		excellent = { 
+						development_growth_factor = 0.08 
+		}
+}
+
+	is_shown = {  }
+	is_valid_showing_failures_only = { }
+	on_start = { }
+	on_end = { }
+
+	ai_will_do = {
+		value = 30
+	}
+}
