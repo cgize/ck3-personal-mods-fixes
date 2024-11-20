@@ -1,0 +1,139 @@
+﻿lord_sheriff_position = {
+	max_available_positions = 1
+	minimum_rank = county
+	category = court_position_category_common
+	skill = martial
+	is_travel_related = no 
+
+	sort_order = { value = 301 }
+		
+	opinion = {	scope:liege = 		{ value = county_court_position_opinion	}
+				scope:employee = 	{ value = county_court_position_opinion	}	}
+	
+	aptitude = court_position_aptitude_lordsheriff_base
+
+	is_shown = {		
+        highest_held_title_tier >= tier_barony		
+        NOT = { government_has_flag = government_is_landless_adventurer }
+    }
+	valid_position = {	highest_held_title_tier >= tier_county 				
+						has_perk = strict_organization_perk	}
+
+	is_shown_character = {	
+		scope:employee = { 	
+			is_courtier_of = scope:liege	
+			is_councillor = no
+			is_imprisoned = no
+		}	
+	}
+
+	valid_character = {
+		scope:employee = {
+			has_trait = education_martial
+			can_be_combatant_based_on_gender_trigger = { ARMY_OWNER = scope:liege }
+			trigger_if = {
+				limit = { NOT = { has_court_position = lord_sheriff_position 	} 	}
+				court_position_does_not_already_have_a_job_trigger = yes		}	}	}
+
+	revoke_cost = {	
+		gold =  {	value = county_court_position_gold_revoke_cost
+			if = {
+				limit = {
+					exists = dynasty
+					dynasty = { has_dynasty_perk = fp2_coterie_legacy_1 }
+					employs_court_position = lord_sheriff_position
+					any_court_position_holder = {	type = lord_sheriff_position
+						exists = dynasty
+						house = prev.house	}	}
+				multiply = 0	
+			}
+		}
+		prestige =  {	value = county_court_position_prestige_revoke_cost
+			if = {
+				limit = {
+					exists = dynasty
+					dynasty = { has_dynasty_perk = fp2_coterie_legacy_1 }
+					employs_court_position = lord_sheriff_position
+					any_court_position_holder = {	type = lord_sheriff_position
+						exists = dynasty
+						house = prev.house	}	}
+				multiply = 0
+			}
+		}
+	}
+
+	salary = {
+		round = no
+		gold = {	value = county_court_position_gold_salary
+			if = {
+				limit = {
+					scope:liege = {
+						exists = dynasty
+						dynasty = { has_dynasty_perk = fp2_coterie_legacy_1 }
+						employs_court_position = court_tutor_court_position
+						any_court_position_holder = {
+					        type = court_tutor_court_position
+							exists = dynasty
+							house = prev.house	}	}	}
+				multiply = {
+					value = 0.0
+					desc = inner_circle_salary_mod
+					format = "BASE_VALUE_FORMAT_DECIMALS_MINUS_POSITIVE"
+				}
+			}
+		}
+	}
+
+	base_employer_modifier = {	monthly_prestige = 0.1	}
+
+scaling_employer_modifiers = {
+		terrible = 	{	
+						monthly_county_control_growth_factor = 0.015
+						army_maintenance_mult = -0.02
+		}
+		poor = 		{	
+						monthly_county_control_growth_factor = 0.03
+						army_maintenance_mult = -0.04
+		}
+		average = 	{	
+						monthly_county_control_growth_factor = 0.045
+						army_maintenance_mult = -0.06
+		}
+		good = 		{	
+						monthly_county_control_growth_factor = 0.06
+						army_maintenance_mult = -0.08
+		}
+		excellent = {	
+						monthly_county_control_growth_factor = 0.075
+						army_maintenance_mult = -0.10
+		}
+}
+
+	custom_scaling_employer_modifier_description = {		
+		terrible = 	desc_lordsheriff_terrible
+		poor = 		desc_lordsheriff_poor
+		average = 	desc_lordsheriff_average
+		good = 		desc_lordsheriff_good
+		excellent = desc_lordsheriff_excellent
+		range = 	desc_lordsheriff_range
+	}
+	
+	modifier = {	martial = 1
+					monthly_martial_lifestyle_xp_gain_mult = 0.1
+					monthly_prestige = 0.2
+					monthly_dread = 0.0
+					monthly_piety = 0.0	}
+
+	
+	on_court_position_received 		= {		basic_gained_court_position_effect = yes		}
+	on_court_position_revoked 		= { 	basic_revoked_court_position_effect = yes		}
+	on_court_position_invalidated 	= {		basic_invalidated_court_position_effect = yes	}
+
+	candidate_score = {
+		value = 50
+		add = scope:base_value
+		add = court_position_candidate_score_base_value
+		add = court_position_candidate_aptitude_value
+		add = court_position_debt_considerations_value
+	}
+}
